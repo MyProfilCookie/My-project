@@ -8,13 +8,12 @@ import { Link } from 'react-router-dom'
 
 function Footer() {
     return (
-        <div><footer className="footer grid-cols-3 bg-gray-200 text-base-content p-10 shadow-footer">
+        <div><footer className="footer grid-cols-3 bg-gray-200 text-base-content p-10 shadow-footer items-center">
             <nav>
                 <h6 className="subtitle mt-2"><Link to="/login"><FontAwesomeIcon icon={faUser} /> Mon profil</Link></h6>
                 <a className="link link-hover">Recette favories</a>
                 <a className="link link-hover">Creation d'une recette</a>
                 <a className="link link-hover">Mes recettes</a>
-                <a className="link link-hover">Déconnexion</a>
             </nav>
             <nav>
                 <h6 className="subtitle">À propos de nous</h6>
