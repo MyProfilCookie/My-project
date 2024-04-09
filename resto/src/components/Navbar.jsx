@@ -65,9 +65,9 @@ const Navbar = () => {
                                 <summary>Recettes</summary>
                                 <ul className="p-2">
                                     <NavLink to="/recettes"><li>Toutes</li></NavLink>
-                                    <NavLink to="/recettes/populaire"><li>Populaire</li></NavLink>
-                                    <NavLink to="/recettes/nouvelle"><li>Nouvelles</li></NavLink>
-                                    <NavLink to="/recettes/best"><li>Best</li></NavLink>
+                                    <NavLink to="/recettes/populaires"><li>les plus populaires</li></NavLink>
+                                    <NavLink to="/recettes/nouvelles"><li>Nouvelles recettes</li></NavLink>
+                                    <NavLink to="/recettes/best"><li>Les meilleurs recettes</li></NavLink>
                                 </ul>
                             </details>
                         </li>

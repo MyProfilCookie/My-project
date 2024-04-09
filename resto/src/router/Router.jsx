@@ -42,11 +42,11 @@ const router = createBrowserRouter([
                 element: <div>Dashboard</div>
             },
             {
-                path:"recettes/nouvelle",
+                path:"recettes/nouvelles",
                 element: <div>Nouvelle</div>
             },
             {
-                path:"recettes/populaire",
+                path:"recettes/populaires",
                 element: <div>Populaire</div>
             },
             {
