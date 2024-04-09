@@ -1,0 +1,16 @@
+.media-w-half {
+    @media (min-width: 768px) {
+        width: 50%;
+    }
+}
+.media-text-5xl {
+    @media (min-width: 768px) {
+        font-size: 5rem;
+        line-height: 1;
+    }
+}
+.media-leading-snug {
+    @media (min-width: 768px) {
+        line-height: 1.25;
+    }
+}
