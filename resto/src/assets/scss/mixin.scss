@@ -1,0 +1,31 @@
+$padding : 5px;
+$bg-color : #f3f4f6;
+
+// création d'un mixin pour un padding et d'un background gris au survole d'un lien
+@mixin hover-link($padding, $bg-color) {
+    padding: $padding;
+    background-color: $bg-color;
+}
+
+// création d'un mixin pour reprendre un background d'image
+@mixin bg-image($url) {
+    background-image: url($url);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+// création d'un mixin pour un padding et d'un background gris au survole d'un lien
+@mixin hover-link($padding, $bg-color) {
+    padding: $padding;
+    background-color: $bg-color;
+}
+// mise en place d'un mixin pour un scale au hover sur les a href
+@mixin hover-scale($scale) {
+    &:hover {
+        transform: scale($scale);
+    }
+}
+// background transparent 
+@mixin bg-transparent {
+    background-color: #f8fafb85;
+}
