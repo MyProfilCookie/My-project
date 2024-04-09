@@ -30,9 +30,9 @@ const Navbar = () => {
 
     const navItems = [
         { id: 1, name: 'Home', link: '/' },
-        { id: 2, name: 'Recettes', link: '/recettes' },
-        { id: 3, name: 'Contact', link: '/contact' },
-        { id: 4, name: 'About', link: '/about' },
+        // faire un menu detail pour la navbar
+        { id: 2, name: 'Contact', link: '/contact' },
+        { id: 3, name: 'About', link: '/about' },
     ]
     return (
         <header className="max-w-screen-2xl xl-px-2 fixed top-0 left-0 right-0 transition-all duration-300 ease-in-out z-10000 py-4">
@@ -47,6 +47,7 @@ const Navbar = () => {
                             {navItems.map(item => (
                                 <li key={item.id}><NavLink to={item.link}>{item.name}</NavLink></li>
                             ))}
+
                         </ul>
                     </div>
                     <a href='/'>
@@ -55,9 +56,21 @@ const Navbar = () => {
                 </div>
                 <div className="navbar-center hidden lg:flex px-4">
                     <ul className="menu menu-horizontal px-1 ">
-                    {navItems.map(item => (
-                                <li key={item.id}><button className="btn btn-circle uppercase btn-ghost"><NavLink to={item.link}>{item.name}</NavLink></button></li>
-                            ))}
+                        {navItems.map(item => (
+                            // faire une loupe en incluant le submenu
+                            <li key={item.id}><NavLink to={item.link}>{item.name}</NavLink></li>
+                        ))}
+                        <li>
+                            <details>
+                                <summary>Recettes</summary>
+                                <ul className="p-2">
+                                    <NavLink to="/recettes"><li>Toutes</li></NavLink>
+                                    <NavLink to="/recettes/populaire"><li>Populaire</li></NavLink>
+                                    <NavLink to="/recettes/nouvelle"><li>Nouvelles</li></NavLink>
+                                    <NavLink to="/recettes/best"><li>Best</li></NavLink>
+                                </ul>
+                            </details>
+                        </li>
                     </ul>
                 </div>
                 <div className="navbar-end">

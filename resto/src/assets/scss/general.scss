@@ -387,7 +387,8 @@ h6 {
   background-color: #edf2f7;
 }
 .bg-base-100 {
-  background-color: #f8fafb;
+  // background-color: #f8fafb;
+  background-color: #f8fafb24;
 }
 .bg-base-200 {
   background-color: #f1f5f9;
@@ -853,4 +854,10 @@ a:hover {
   &:hover {
     border: 2px solid #ff4747;
   }
+}
+.bg-prigmayBG {
+  background-color: #f8f8f8;
+}
+.min-h-screen {
+  min-height: 100vh;
 }

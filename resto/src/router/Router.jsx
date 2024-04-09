@@ -25,6 +25,34 @@ const router = createBrowserRouter([
                 path: "/about",
                 element: <div>About 📧</div>
             },
+            {
+                path: "*",
+                element: <div>404</div>
+            },
+            {
+                path: "/register",
+                element: <div>Register</div>
+            },
+            {
+                path: "/login",
+                element: <div>Login</div>
+            },
+            {
+                path: "/dashboard",
+                element: <div>Dashboard</div>
+            },
+            {
+                path:"recettes/nouvelle",
+                element: <div>Nouvelle</div>
+            },
+            {
+                path:"recettes/populaire",
+                element: <div>Populaire</div>
+            },
+            {
+                path:"recettes/best",
+                element: <div>Best</div>
+            }
         ]
     }
 ])
