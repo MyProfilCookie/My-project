@@ -32,6 +32,7 @@ const Navbar = () => {
         { id: 1, name: 'Home', link: '/' },
         { id: 2, name: 'Recettes', link: '/recettes' },
         { id: 3, name: 'Contact', link: '/contact' },
+        { id: 4, name: 'About', link: '/about' },
     ]
     return (
         <header className="max-w-screen-2xl xl-px-2 fixed top-0 left-0 right-0 transition-all duration-300 ease-in-out z-10000 py-4">
@@ -60,9 +61,9 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <NavLink to="/login" className="btn btn-ghost btn-circle"><FontAwesomeIcon icon={faUserPlus} /></NavLink>
+                    <NavLink to="/register" className="btn btn-ghost btn-circle"><FontAwesomeIcon icon={faUserPlus} /></NavLink>
                     <NavLink to="/login" className="btn btn-ghost btn-circle"><FontAwesomeIcon icon={faUser} /></NavLink>
-                    <NavLink to="/login" className="btn btn-ghost btn-circle"><FontAwesomeIcon icon={faUserMinus} /></NavLink>
+                    <NavLink to="/deconnexion" className="btn btn-ghost btn-circle"><FontAwesomeIcon icon={faUserMinus} /></NavLink>
                 </div>
             </div>
         </header>
