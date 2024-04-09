@@ -5,7 +5,7 @@ import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 const Main = () => {
     return (
-        <div className='bg-prigmayBG'>
+        <div className='b-gradient-to-b'>
             <Navbar />
             <div className='min-h-screen'>
                 <Outlet />

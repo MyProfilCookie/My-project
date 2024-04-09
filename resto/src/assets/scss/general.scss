@@ -105,12 +105,16 @@ h6 {
   background-image: linear-gradient(to top, #ff4747, rgba(255, 255, 255, 0));
 }
 .b-gradient-to-b {
-  background-image: linear-gradient(to bottom, #ff4747, rgba(255, 255, 255, 0));
+  background-image: linear-gradient(to bottom, #eec1c1, rgba(255, 255, 255, 0));
 }
 
 .py-24 {
   padding-top: 6rem;
   padding-bottom: 6rem;
+}
+.py-48 {
+  padding-top: 12rem;
+  padding-bottom: 12rem;
 }
 .text-4xl {
   font-size: 3rem;
@@ -856,7 +860,8 @@ a:hover {
   }
 }
 .bg-prigmayBG {
-  background-color: #f8f8f8;
+  // background-color: #f8f8f8;
+  background-color: rgba(240, 248, 255, 0.65);
 }
 .min-h-screen {
   min-height: 100vh;
