@@ -4,7 +4,7 @@ import React from 'react'
 function Recettes() {
   return (
     <div>
-      
+      Recette
     </div>
   )
 }
