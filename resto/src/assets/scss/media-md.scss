@@ -17,7 +17,7 @@
 }
 
 .md-flex-col-reverse {
-  @media (max-width: 768px) {
+  @media (max-width: 1024px) {
     flex-direction: column-reverse;
   }
 }
@@ -254,5 +254,25 @@
 .md-grid-cols-4 {
   @media (max-width: 768px) {
     grid-template-columns: repeat(3, 1fr);
+  }
+}
+.md-flex-wrap {
+  @media (max-width: 768px) {
+    flex-wrap: wrap;
+  }
+}
+.md-relative {
+  @media (max-width: 768px) {
+    position: initial;
+  }
+}
+.md-mx-auto {
+  @media (max-width: 768px) {
+    margin: 0 auto;
+  }
+}
+.md-block {
+  @media (max-width: 768px) {
+    display: block;
   }
 }

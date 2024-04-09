@@ -18,7 +18,7 @@ function Categories() {
 
             </div>
 
-            <div className='flex flex-row gap-8 md-flex-col flex-wrap justify-around items-center mt-12'>
+            <div className='flex flex-wrap gap-8 md-flex-col justify-around items-center mt-12'>
                 {
                     Category.map((category) => {
                         return <div key={category.id} className=' shadow-lg rounded-md py-6 px-8 w-50 bg-white rounded-md mx-auto text-center cursor-pointer' >

@@ -68,10 +68,10 @@ function SpecialRecette() {
         <div className='section-container my-20 relative'>
             <div className='text-center'>
                 <p className='text-red uppercase tracking-wide font-medium text-lg'>Voici quelques recettes</p>
-                <h2 className='text-4xl md-text-5xl font-bold my-2 md-leading-snug leading-snug md-w-96 '>N'hésitez pas à les reproduire</h2>
+                <h2 className='text-4xl md-text-5xl font-bold my-2 md-leading-snug leading-snug md-w-96 md-mx-auto '>N'hésitez pas à les reproduire</h2>
 
             </div>
-            <div className='absolute top-8 right-3 mb-10 flex'>
+            <div className='absolute top-8 right-3 mb-10 flex md-relative md-mx-auto'>
                 <button onClick={() => slider?.current?.slickPrev()} className='btn p-2 rounded-full ml-5 bg-red'><FontAwesomeIcon icon={faChevronLeft} size="2xl" className='w-8 h-8 p-1' /></button>
                 <button onClick={() => slider?.current?.slickNext()} className='btn p-2 mx-2 rounded-full ml-5 bg-red'><FontAwesomeIcon icon={faChevronRight} size="2xl" className='w-8 h-8 p-1' /></button>
 
