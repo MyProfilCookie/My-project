@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom'
 function Footer() {
     return (
         <div>
-            <footer className="footer grid-cols-3 bg-gray-200 text-base-content p-10 shadow-footer items-center">
+            <footer className="footer grid-cols-3 bg-belge-dark text-base-content p-10 shadow-footer items-center">
                 <nav>
                     <h6 className="subtitle mt-2"><Link to="/login"><FontAwesomeIcon icon={faUser} /> Mon profil</Link></h6>
                     <a className="link link-hover">Recette favories</a>
@@ -29,7 +29,7 @@ function Footer() {
                     <a className="link link-hover">Conditions d'utilisation</a>
                 </nav>
             </footer>
-            <footer className="border-t bg-gray-200 text-base-content border-base-300 flex justify-between">
+            <footer className="border-t bg-belge-dark text-base-content border-base-300 flex justify-between">
                 <aside className="items-center grid-flow-col flex">
                     <a href='/'>
                         <img src={logo} alt="logo" width={100} />

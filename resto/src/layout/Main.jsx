@@ -5,7 +5,7 @@ import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 const Main = () => {
     return (
-        <div className='bg-base-200'>
+        <div className='bg-beige'>
             <Navbar />
             <div className='min-h-screen'>
                 <Outlet />

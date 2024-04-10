@@ -9,7 +9,29 @@ function Categories() {
         { id: 2, name: "Chocolat", image: "./images/chocolat.jpeg" },
         { id: 3, name: "Pains et viennoiserie", image: "./images/pain.jpeg" },
         { id: 4, name: "Fruits", image: "./images/fruits.jpeg" },
-    ]
+    ];
+    
+    async function fetchCategories() {
+        // Simule une requête asynchrone avec un délai de 1 seconde
+        await new Promise(resolve => setTimeout(resolve, 500));
+        
+        
+        return Category;
+    }
+    
+    // Utilisation de la fonction asynchrone
+    async function fetchData() {
+        try {
+            const categories = await fetchCategories();
+            console.log(categories);
+            // Utilisez les catégories récupérées ici
+        } catch (error) {
+            console.error('Une erreur est survenue :', error);
+        }
+    }
+    
+    // Appel de la fonction fetchData
+    fetchData();
     return (
         <div className='section-container py-16'>
             <div className='text-center'>

@@ -707,7 +707,7 @@
     "image": "/images/chocolat.jpeg"
   },
   {
-    "id": 21,
+    "id": 23,
     "titre": "Tartelettes aux fraises",
     "description": "De délicieuses tartelettes garnies de fraises fraîches, parfaites pour le printemps.",
     "ingredients": [
@@ -733,7 +733,7 @@
     "image": "/images/chocolat.jpeg"
   },
   {
-    "id": 22,
+    "id": 24,
     "titre": "Éclairs au chocolat",
     "description": "Des éclairs garnis d'une crème pâtissière onctueuse et nappés de chocolat fondant.",
     "ingredients": [
@@ -759,7 +759,7 @@
     "image": "/images/chocolat.jpeg"
   },
   {
-    "id": 23,
+    "id": 25,
     "titre": "Mille-feuille",
     "description": "Un classique de la pâtisserie française, composé de fines couches de pâte feuilletée croustillante et de crème pâtissière légère.",
     "ingredients": [
@@ -788,7 +788,7 @@
     "image": "/images/chocolat.jpeg"
   },
   {
-    "id": 24,
+    "id": 26,
     "titre": "Tarte aux cerises",
     "description": "Une tarte aux cerises juteuses et acidulées, parfaite pour l'été.",
     "ingredients": [
@@ -838,7 +838,7 @@
     "image": "/images/chocolat.jpeg"
   },
   {
-    "id": 26,
+    "id": 27,
     "titre": "Cheesecake aux fruits rouges",
     "description": "Un cheesecake crémeux agrémenté d'un coulis de fruits rouges acidulé, parfait pour les amateurs de desserts frais et légers.",
     "ingredients": [
@@ -873,7 +873,7 @@
     "image": "/images/chocolat.jpeg"
   },
   {
-    "id": 27,
+    "id": 28,
     "titre": "Cookies aux pépites de chocolat",
     "description": "Des cookies moelleux et généreux en pépites de chocolat, parfaits pour une pause gourmande à tout moment de la journée.",
     "ingredients": [
@@ -906,7 +906,7 @@
     "image": "/images/chocolat.jpeg"
   },
   {
-    "id": 28,
+    "id": 29,
     "titre": "Cookies au beurre au fromage frais",
     "description": "Des cookies moelleux et gérants en beurre, parfaits pour une pause gourmande à tout moment de la première.",
     "ingredients": [
@@ -939,7 +939,7 @@
     "image": "/images/chocolat.jpeg"
   },
   {
-    "id": 29,
+    "id": 30,
     "titre": "Fondant au chocolat",
     "description": "Un dessert irrésistiblement fondant au cœur chocolaté, parfait pour les amateurs de chocolat.",
     "ingredients": [
@@ -968,7 +968,7 @@
     "image": "/images/chocolat.jpeg"
   },
   {
-    "id": 30,
+    "id": 31,
     "titre": "Truffes au chocolat",
     "description": "Des petites bouchées chocolatées fondantes et délicieusement parfumées, parfaites pour les amateurs de chocolat.",
     "ingredients": [
@@ -997,7 +997,7 @@
     "image": "/images/chocolat.jpeg"
   },
   {
-    "id": 31,
+    "id": 32,
     "titre": "Brownies au chocolat et aux noix",
     "description": "Des brownies riches en chocolat et agrémentés de délicieuses noix croquantes, parfaits pour une pause gourmande.",
     "ingredients": [
@@ -1028,7 +1028,7 @@
     "image": "/images/chocolat.jpeg"
   },
   {
-    "id": 31,
+    "id": 33,
     "titre": "Tartelettes au chocolat et aux framboises",
     "description": "Des délicieuses tartelettes au chocolat noir garnies de framboises fraîches pour une explosion de saveurs en bouche.",
     "ingredients": [
@@ -1056,7 +1056,7 @@
     "image": "/images/chocolat.jpeg"
   },
   {
-    "id": 32,
+    "id": 34,
     "titre": "Cookies au chocolat blanc et aux cranberries",
     "description": "Des cookies moelleux et gourmands, associant la douceur du chocolat blanc au côté acidulé des cranberries séchées.",
     "ingredients": [
@@ -1089,7 +1089,7 @@
     "image": "/images/chocolat.jpeg"
   },
   {
-    "id": 33,
+    "id": 35,
     "titre": "Cupcakes au chocolat et à la crème au beurre",
     "description": "Des cupcakes moelleux au chocolat, garnis d'une délicieuse crème au beurre au chocolat pour une gourmandise irrésistible.",
     "ingredients": [
@@ -1126,7 +1126,7 @@
     "image": "/images/chocolat.jpeg"
   },
   {
-    "id": 34,
+    "id": 36,
     "titre": "Gâteau au yaourt",
     "description": "Un gâteau moelleux et léger, préparé à base de yaourt pour un résultat parfait à chaque fois.",
     "ingredients": [
@@ -1186,7 +1186,7 @@
     "image": "/images/chocolat.jpeg"
   },
   {
-    "id": 36,
+    "id": 37,
     "titre": "Croissants au beurre",
     "description": "Des croissants croustillants et dorés, au beurre de qualité pour une saveur authentique.",
     "ingredients": [
@@ -1219,7 +1219,7 @@
     "image": "/images/chocolat.jpeg"
   },
   {
-    "id": 37,
+    "id": 38,
     "titre": "Pain brioché aux pépites de chocolat",
     "description": "Un pain brioché moelleux, enrichi de pépites de chocolat pour une version gourmande et réconfortante.",
     "ingredients": [
@@ -1253,7 +1253,7 @@
     "image": "/images/chocolat.jpeg"
   },
   {
-    "id": 38,
+    "id": 39,
     "titre": "Palmiers au chocolat",
     "description": "Des palmiers croustillants et feuilletés, garnis de délicieux pépites de chocolat pour une touche de gourmandise.",
     "ingredients": [
@@ -1279,7 +1279,7 @@
     "image": "/images/chocolat.jpeg"
   },
   {
-    "id": 39,
+    "id": 40,
     "titre": "Brioche aux pépites de chocolat",
     "description": "Une brioche moelleuse et parfumée, agrémentée de généreuses pépites de chocolat pour une touche de gourmandise.",
     "ingredients": [
@@ -1314,7 +1314,7 @@
     "image": "/images/chocolat.jpeg"
   },
   {
-    "id": 40,
+    "id": 41,
     "titre": "Croissants au chocolat",
     "description": "Des croissants feuilletés et croustillants, fourrés avec une délicieuse garniture au chocolat pour une pause gourmande.",
     "ingredients": [
@@ -1340,7 +1340,7 @@
     "image": "/images/chocolat.jpeg"
   },
   {
-    "id": 41,
+    "id": 42,
     "titre": "Pain aux raisins",
     "description": "Un délicieux pain brioché aux raisins secs, parfait pour accompagner le petit-déjeuner ou pour une pause gourmande.",
     "ingredients": [
@@ -1374,7 +1374,7 @@
     "image": "/images/chocolat.jpeg"
   },
   {
-    "id": 42,
+    "id": 43,
     "titre": "Pain au lait",
     "description": "Un délicieux pain moelleux au lait, idéal pour le petit-déjeuner ou le goûter.",
     "ingredients": [
@@ -1405,7 +1405,7 @@
     "image": "/images/chocolat.jpeg"
   },
   {
-    "id": 43,
+    "id": 44,
     "titre": "Pain aux céréales",
     "description": "Un pain rustique aux céréales, riche en saveurs et en textures.",
     "ingredients": [
@@ -1439,7 +1439,7 @@
     "image": "/images/chocolat.jpeg"
   },
   {
-    "id": 44,
+    "id": 45,
     "titre": "Pain aux olives",
     "description": "Un pain savoureux aux olives, parfait pour accompagner les apéritifs ou les repas.",
     "ingredients": [
@@ -1471,7 +1471,7 @@
     "image": "/images/chocolat.jpeg"
   },
   {
-    "id": 43,
+    "id": 46,
     "titre": "Fondant au chocolat et caramel beurre salé",
     "description": "Un délicieux fondant au chocolat nappé d'une généreuse sauce au caramel beurre salé, un vrai plaisir pour les amateurs de gourmandise.",
     "ingredients": [
@@ -1501,7 +1501,7 @@
     "image": "/images/chocolat.jpeg"
   },
   {
-    "id": 44,
+    "id": 47,
     "titre": "Brownies aux noix de pécan",
     "description": "Des brownies riches en chocolat et agrémentés de délicieuses noix de pécan croquantes, un pur délice pour les papilles.",
     "ingredients": [
@@ -1532,7 +1532,7 @@
     "image": "/images/chocolat.jpeg"
   },
   {
-    "id": 45,
+    "id": 48,
     "titre": "Cookies aux pépites de chocolat",
     "description": "Des cookies moelleux à l'intérieur et croustillants à l'extérieur, garnis de généreuses pépites de chocolat pour une touche de gourmandise.",
     "ingredients": [
@@ -1564,7 +1564,7 @@
     "image": "/images/chocolat.jpeg"
   },
   {
-    "id": 46,
+    "id": 49,
     "titre": "Tartelette au citron meringuée",
     "description": "Des tartelettes acidulées au citron, garnies d'une délicieuse meringue légère et dorée, un véritable délice pour les amateurs de gourmandise.",
     "ingredients": [
@@ -1594,7 +1594,7 @@
     "image": "/images/chocolat.jpeg"
   },
   {
-    "id": 48,
+    "id": 50,
     "titre": "Tarte Tatin aux pommes",
     "description": "Une tarte renversée aux pommes caramélisées, fondante et délicieusement parfumée à la cannelle, un grand classique de la pâtisserie française.",
     "ingredients": [
@@ -1621,7 +1621,7 @@
     "image": "/images/chocolat.jpeg"
   },
   {
-    "id": 49,
+    "id": 51,
     "titre": "Tarte aux pommes",
     "description": "Une tarte au fromage frais, fondante et délicieusement parfumée à la cannelle, un grand classique de la pátisserie ….",
     "ingredients": [
@@ -1649,7 +1649,7 @@
     "image": "/images/chocolat.jpeg"
   },
   {
-    "id": 50,
+    "id": 52,
     "titre": "Cake aux fruits confits",
     "description": "Un cake moelleux et parfumé, agrémenté de délicieux fruits confits pour une touche de douceur sucrée.",
     "ingredients": [

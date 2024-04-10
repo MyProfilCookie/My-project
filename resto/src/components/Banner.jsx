@@ -37,7 +37,7 @@ function Banner() {
                 <p className='text-red '>(6 votes)</p>
               </div>
             </div>
-            <div className='flex bg-white hidden-md md:flex rounded-2xl items-center shadow-md w-64 sd-w-full '>
+            <div className='flex  bg-white hidden-md md:flex rounded-2xl items-center shadow-md w-64 sd-w-full '>
               <img src='./bavarois.jpeg' alt="banner" width={125} height={150} className='rounded-semi' />
               <div className='space-y-1 '>
 

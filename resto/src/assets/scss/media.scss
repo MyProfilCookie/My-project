@@ -30,3 +30,8 @@
         width: 80%;
     }
 }
+.media-grid-cols-3 {
+    @media (min-width: 768px) {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
