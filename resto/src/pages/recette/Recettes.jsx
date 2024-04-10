@@ -42,16 +42,16 @@ function Recettes() {
   }
   const showCategory = (option) => {
     setSearchOptions(option);
-    let sortedRecettes = [...filteredRecettes]
+    let sortedRecettes = recettes;
     switch(option) {
       case 'difficile':
-        sortedRecettes.sort((a, b) => a.difficulte.localeCompare(b.difficile));
+        sortedRecettes = sortedRecettes.filter((recette) => recette.difficulte === 'difficile');
         break;
       case 'facile':
-        sortedRecettes.sort((a, b) => a.difficulte.localeCompare(b.facile));
+        sortedRecettes = sortedRecettes.filter((recette) => recette.difficulte === 'facile');
         break;
       case 'moyenne':
-        sortedRecettes.sort((a, b) => a.difficulte.localeCompare(b.moyenne));
+        sortedRecettes = sortedRecettes.filter((recette) => recette.difficulte ==='moyenne');
         break;
       default:
         break;
