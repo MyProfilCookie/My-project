@@ -8,26 +8,27 @@ import { Link } from 'react-router-dom'
 
 function Footer() {
     return (
-        <div><footer className="footer grid-cols-3 bg-gray-200 text-base-content p-10 shadow-footer items-center">
-            <nav>
-                <h6 className="subtitle mt-2"><Link to="/login"><FontAwesomeIcon icon={faUser} /> Mon profil</Link></h6>
-                <a className="link link-hover">Recette favories</a>
-                <a className="link link-hover">Creation d'une recette</a>
-                <a className="link link-hover">Mes recettes</a>
-            </nav>
-            <nav>
-                <h6 className="subtitle">À propos de nous</h6>
-                <a className="link link-hover">Qui sommes-nous?</a>
-                <a className="link link-hover">Contact</a>
-                <a className="link link-hover">FAQ</a>
-            </nav>
-            <nav>
-                <h6 className="subtitle p-0">Informations legales</h6>
-                <a className="link link-hover">Mentions légales</a>
-                <a className="link link-hover">Politique de confidentialite</a>
-                <a className="link link-hover">Conditions d'utilisation</a>
-            </nav>
-        </footer>
+        <div>
+            <footer className="footer grid-cols-3 bg-gray-200 text-base-content p-10 shadow-footer items-center">
+                <nav>
+                    <h6 className="subtitle mt-2"><Link to="/login"><FontAwesomeIcon icon={faUser} /> Mon profil</Link></h6>
+                    <a className="link link-hover">Recette favories</a>
+                    <a className="link link-hover">Creation d'une recette</a>
+                    <a className="link link-hover">Mes recettes</a>
+                </nav>
+                <nav>
+                    <h6 className="subtitle">À propos de nous</h6>
+                    <a className="link link-hover">Qui sommes-nous?</a>
+                    <a className="link link-hover">Contact</a>
+                    <a className="link link-hover">FAQ</a>
+                </nav>
+                <nav>
+                    <h6 className="subtitle p-0">Informations legales</h6>
+                    <a className="link link-hover">Mentions légales</a>
+                    <a className="link link-hover">Politique de confidentialite</a>
+                    <a className="link link-hover">Conditions d'utilisation</a>
+                </nav>
+            </footer>
             <footer className="border-t bg-gray-200 text-base-content border-base-300 flex justify-between">
                 <aside className="items-center grid-flow-col flex">
                     <a href='/'>

@@ -18,7 +18,7 @@ function Cards({ item }) {
 
     return (
         <div>
-            <div className="card w-80 mx-auto md-w-70 md-mx-auto bg-white shadow-xl p-10 m-8 relative transition duration-300 ease-in-out gap-3">
+            <div className="card w-80 mx-auto md-w-70 md-mx-auto bg-base-100 shadow-xl p-10 m-8 relative transition duration-300 ease-in-out gap-3">
                 <div className={`gap-1 absolute top-2 right-4 p-4 bg-cyan-500 z-10 heartState ${isFavorite ? 'text-red' : 'text-white'}`} onClick={handleClick}>
                     <FontAwesomeIcon icon={faHeart}  className='absolute top-2 left-2 m-4 z-10000 cursor-pointer transition-all duration-300 font-size-24' size="2xl"/>
                 </div>
