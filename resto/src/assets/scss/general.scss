@@ -219,6 +219,10 @@ h6 {
   color: #ff4747;
   cursor: pointer;
 }
+.btn:active {
+  transform: scale(0.98);
+}
+
 
 .px-4 {
   padding-left: 1rem;

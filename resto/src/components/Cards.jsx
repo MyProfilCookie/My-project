@@ -8,6 +8,7 @@ import { faHeart } from '@fortawesome/free-solid-svg-icons'
 
 
 function Cards({ item }) {
+    const {titre, image, difficulte, category, _id } = item;
 
     const [isFavorite, setIsFavorite] = useState(false);
     const handleClick = () => {

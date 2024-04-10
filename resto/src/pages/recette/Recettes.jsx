@@ -6,7 +6,7 @@ function Recettes() {
   const [recettes, setRecettes] = React.useState([]);
   const [filteredRecettes, setFilteredRecettes] = React.useState([]);
   const [search, setSearch] = React.useState('toutes');
-  const [searchOptions, setSearchOptions] = React.useState(['Default']);
+  const [searchOptions, setSearchOptions] = React.useState('toutes');
 
   useEffect(
     () => {
@@ -43,35 +43,31 @@ function Recettes() {
   const showCategory = (option) => {
     setSearchOptions(option);
     let sortedRecettes = [...filteredRecettes]
-    switch (option[0]) {
-      case 'Pains et viennoiserie':
-        sortedRecettes.sort((a, b) => a.pain - b.pain);
+    switch(option) {
+      case 'difficile':
+        sortedRecettes.sort((a, b) => a.difficulte.localeCompare(b.difficile));
         break;
-      case 'Chocolat':
-        sortedRecettes.sort((a, b) => a.chocolat - b.chocolat);
+      case 'facile':
+        sortedRecettes.sort((a, b) => a.difficulte.localeCompare(b.facile));
         break;
-      case 'Gourmandises':
-        sortedRecettes.sort((a, b) => a.gourmandises - b.gourmandises);
-        break;
-      case 'Fruits':
-        sortedRecettes.sort((a, b) => a.fruits - b.fruits);
+      case 'moyenne':
+        sortedRecettes.sort((a, b) => a.difficulte.localeCompare(b.moyenne));
         break;
       default:
-        sortedRecettes = filterRecettes('toutes');
         break;
     }
     setFilteredRecettes(sortedRecettes);
-    return sortedRecettes;
+    console.log(sortedRecettes);
 
   }
 
 
 
 
-  const handleSearch = (e) => {
-    setSearch(e.target.value);
-    setFilteredRecettes(recettes.filter((recette) => recette.title.toLowerCase().includes(e.target.value.toLowerCase())));
-  }
+  // const handleSearch = (e) => {
+  //   setSearch(e.target.value);
+  //   setFilteredRecettes(recettes.filter((recette) => recette.title.toLowerCase().includes(e.target.value.toLowerCase())));
+  // }
 
   return (
     <div>
@@ -91,32 +87,44 @@ function Recettes() {
         </div>
       </div>
 
-      <div className="section-container">
+      <div className="section-container align-center">
         {/* bouton de recherche */}
         <div>Bouton de recherche</div>
-        <div className='flex flew-row gap-4'>
+        <div className='flex justify-between items-center'>
 
-          <button onClick={showAll} className="btn">toutes</button>
-          <button onClick={() => filterRecettes('Pains et viennoiserie')} className="btn">Pains et viennoiserie</button>
-          <button onClick={() => filterRecettes('Chocolat')} className="btn">Chocolat</button>
-          <button onClick={() => filterRecettes('Gourmandises')} className="btn">Gourmandise</button>
-          <button onClick={() => filterRecettes('Fruits')} className="btn">Fruits</button>
+          <div className='flex mb-10 flew-row gap-4'>
+
+            <button onClick={showAll} className={search === 'toutes' ? 'active:' : 'btn'}>toutes</button>
+            <button onClick={() => filterRecettes('Pains et viennoiserie')} className={search === 'Pains et viennoiserie' ? 'active' : 'btn'}>Pains et viennoiserie</button>
+            <button onClick={() => filterRecettes('Chocolat')} className={search === 'Chocolat' ? 'active' : 'btn'}>Chocolat</button>
+            <button onClick={() => filterRecettes('Gourmandises')} className={search === 'Gourmandises' ? 'active' : 'btn'}>Gourmandise</button>
+            <button onClick={() => filterRecettes('Fruits')} className={search === 'Fruits' ? 'active' : 'btn'}>Fruits</button>
+          </div>
+          <div>
+
+          </div>
+          {/* afficher le nombre de recettes disponibles par categorie dans la barre de recherche */}
+          <div className='mb-10 flex'>
+            <select className="form-select form-select-lg btn" 
+            name="sort" id="sort"  
+            onChange={(e) => showCategory(e.target.value)} 
+            value={searchOptions}
+
+>
+              <option value="toutes" >toutes</option>
+              <option value="difficile">Difficile</option>
+              <option value="facile">facile</option>
+              <option value="moyenne">moyenne</option>
+            </select>
+          </div>
         </div>
-        {/* <div>
-          <select className="form-select" aria-label="Default select example" onChange={(e) => showCategory(e.target.value)}>
-            <option value="toutes">Toutes</option>
-            <option value="Pains et viennoiserie">Pains et viennoiserie</option>
-            <option value="Chocolat">Chocolat</option>
-            <option value="Gourmandise">Gourmandise</option>
-            <option value="Fruits">Fruits</option>
-          </select>
-        </div> */}
         {/* faisons afficher la liste de nos recettes */}
-        <div className='grid grid-cols-2 media-grid-cols-3 lg-grid-cols-4   gap-4 mb-10' >
+        <div className='grid grid-cols-2 media-grid-cols-3 lg-grid-cols-4 gap-4 mb-10'>
           {filteredRecettes.map((item) => (
             <Cards key={item._id} item={item} />
           ))}
         </div>
+
       </div>
 
     </div >
