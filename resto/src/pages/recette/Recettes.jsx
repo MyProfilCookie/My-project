@@ -50,8 +50,8 @@ function Recettes() {
       case 'Chocolat':
         sortedRecettes.sort((a, b) => a.chocolat - b.chocolat);
         break;
-      case 'Gourmandise':
-        sortedRecettes.sort((a, b) => a.gourmandise - b.gourmandise);
+      case 'Gourmandises':
+        sortedRecettes.sort((a, b) => a.gourmandises - b.gourmandises);
         break;
       case 'Fruits':
         sortedRecettes.sort((a, b) => a.fruits - b.fruits);
@@ -94,6 +94,23 @@ function Recettes() {
       <div className="section-container">
         {/* bouton de recherche */}
         <div>Bouton de recherche</div>
+        <div className='flex flew-row gap-4'>
+
+          <button onClick={showAll} className="btn">toutes</button>
+          <button onClick={() => filterRecettes('Pains et viennoiserie')} className="btn">Pains et viennoiserie</button>
+          <button onClick={() => filterRecettes('Chocolat')} className="btn">Chocolat</button>
+          <button onClick={() => filterRecettes('Gourmandises')} className="btn">Gourmandise</button>
+          <button onClick={() => filterRecettes('Fruits')} className="btn">Fruits</button>
+        </div>
+        {/* <div>
+          <select className="form-select" aria-label="Default select example" onChange={(e) => showCategory(e.target.value)}>
+            <option value="toutes">Toutes</option>
+            <option value="Pains et viennoiserie">Pains et viennoiserie</option>
+            <option value="Chocolat">Chocolat</option>
+            <option value="Gourmandise">Gourmandise</option>
+            <option value="Fruits">Fruits</option>
+          </select>
+        </div> */}
         {/* faisons afficher la liste de nos recettes */}
         <div className='grid grid-cols-2 media-grid-cols-3 lg-grid-cols-4   gap-4 mb-10' >
           {filteredRecettes.map((item) => (
