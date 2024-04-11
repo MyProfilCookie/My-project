@@ -8,6 +8,7 @@ function Recettes() {
   const [search, setSearch] = React.useState('toutes');
   const [searchOptions, setSearchOptions] = React.useState('toutes');
   const [currentPage, setCurrentPage] = React.useState(1);
+  const [itemsPerPage, setItemsPerPage] = React.useState(12);
   // d'éléments par page
 
   useEffect(
@@ -34,13 +35,13 @@ function Recettes() {
         ? recettes : recettes.filter((recette) => recette.category === category);
     setFilteredRecettes(filtered);
     setSearch(category);
-    return filtered;
+    setCurrentPage(1);
   }
   // montrer toute la base de données
   const showAll = () => {
     setFilteredRecettes(recettes);
     setSearch('toutes');
-    return recettes;
+    setCurrentPage(1);
   }
   const showCategory = (option) => {
     setSearchOptions(option);
@@ -59,9 +60,18 @@ function Recettes() {
         break;
     }
     setFilteredRecettes(sortedRecettes);
-    console.log(sortedRecettes);
+    setCurrentPage(1);
 
   }
+
+  const indexOfLastRecette = currentPage * itemsPerPage;
+  const indexOfFirstRecette = indexOfLastRecette - itemsPerPage;
+  const currentRecettes = filteredRecettes.slice(indexOfFirstRecette, indexOfLastRecette);
+  const pageNumbers = [];
+  for (let i = 1; i <= Math.ceil(filteredRecettes.length / itemsPerPage); i++) {
+    pageNumbers.push(i);
+  }
+  const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
 
 
@@ -128,6 +138,7 @@ function Recettes() {
         </div>
 
       </div>
+
 
     </div >
   )
