@@ -43,7 +43,7 @@ function Recettes() {
   const showCategory = (option) => {
     setSearchOptions(option);
     let sortedRecettes = recettes;
-    switch(option) {
+    switch (option) {
       case 'difficile':
         sortedRecettes = sortedRecettes.filter((recette) => recette.difficulte === 'difficile');
         break;
@@ -51,7 +51,7 @@ function Recettes() {
         sortedRecettes = sortedRecettes.filter((recette) => recette.difficulte === 'facile');
         break;
       case 'moyenne':
-        sortedRecettes = sortedRecettes.filter((recette) => recette.difficulte ==='moyenne');
+        sortedRecettes = sortedRecettes.filter((recette) => recette.difficulte === 'moyenne');
         break;
       default:
         break;
@@ -92,25 +92,25 @@ function Recettes() {
         <div>Bouton de recherche</div>
         <div className='flex justify-between items-center'>
 
-          <div className='flex mb-10 flew-row gap-4'>
+          <div className='flex mb-10 mt-10 flew-row gap-4'>
 
-            <button onClick={showAll} className={search === 'toutes' ? 'active:' : 'btn'}>toutes</button>
-            <button onClick={() => filterRecettes('Pains et viennoiserie')} className={search === 'Pains et viennoiserie' ? 'active' : 'btn'}>Pains et viennoiserie</button>
-            <button onClick={() => filterRecettes('Chocolat')} className={search === 'Chocolat' ? 'active' : 'btn'}>Chocolat</button>
-            <button onClick={() => filterRecettes('Gourmandises')} className={search === 'Gourmandises' ? 'active' : 'btn'}>Gourmandise</button>
-            <button onClick={() => filterRecettes('Fruits')} className={search === 'Fruits' ? 'active' : 'btn'}>Fruits</button>
+            <button onClick={showAll} className={search === 'toutes' ? 'button active' : 'btn'}>toutes</button>
+            <button onClick={() => filterRecettes('Pains et viennoiserie')} className={search === 'Pains et viennoiserie' ? 'button active' : 'btn'}>Pains et viennoiserie</button>
+            <button onClick={() => filterRecettes('Chocolat')} className={search === 'Chocolat' ? 'button active' : 'btn'} >Chocolat</button>
+            <button onClick={() => filterRecettes('Gourmandises')} className={search === 'Gourmandises' ? 'button active' : 'btn'}>Gourmandise</button>
+            <button onClick={() => filterRecettes('Fruits')} className={search === 'Fruits' ? 'button active' : 'btn'}>Fruits</button>
           </div>
           <div>
 
           </div>
           {/* afficher le nombre de recettes disponibles par categorie dans la barre de recherche */}
           <div className='mb-10 flex'>
-            <select className="form-select form-select-lg btn" 
-            name="sort" id="sort"  
-            onChange={(e) => showCategory(e.target.value)} 
-            value={searchOptions}
+            <select className="form-select form-select-lg btn"
+              name="sort" id="sort"
+              onChange={(e) => showCategory(e.target.value)}
+              value={searchOptions}
 
->
+            >
               <option value="toutes" >toutes</option>
               <option value="difficile">Difficile</option>
               <option value="facile">facile</option>

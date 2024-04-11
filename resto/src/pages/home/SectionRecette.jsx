@@ -57,7 +57,7 @@ function SectionRecette() {
                             </div>
                         </div>
                     </div>
-                    <Link to='/recette' className='btn-primary px-8 py-3 font-semibold rounded-full mt-12 hover-scale-110 transition duration-300'>Voir plus</Link>
+                    <Link to='/recettes' className='btn-primary px-8 py-3 font-semibold rounded-full mt-12 hover-scale-110 transition duration-300'>Voir plus</Link>
                 </div>
             </div>
         </div>

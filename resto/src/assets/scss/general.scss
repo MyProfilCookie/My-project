@@ -219,10 +219,6 @@ h6 {
   color: #ff4747;
   cursor: pointer;
 }
-.btn:active {
-  transform: scale(0.98);
-}
-
 
 .px-4 {
   padding-left: 1rem;
@@ -927,4 +923,16 @@ a:hover {
 }
 .min-h-screen {
   min-height: 100vh;
+}
+.button {
+  border: none;
+ background-color: transparent;
+  cursor: pointer
+}
+.active {
+  color: #ff4747;
+  border-bottom: 2px solid #ff4747;
+  font-weight: 700;
+  font-size: 1.25rem;
+  transition: all 0.3s ease-in-out;
 }

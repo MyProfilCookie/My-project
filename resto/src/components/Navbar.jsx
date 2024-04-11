@@ -33,6 +33,10 @@ const Navbar = () => {
         // faire un menu detail pour la navbar
         { id: 2, name: 'Contact', link: '/contact' },
         { id: 3, name: 'About', link: '/about' },
+        { id: 4, name: 'Recettes', link: '/recettes' },
+        { id: 5, name: 'Login', link: '/login' },
+        { id: 6, name: 'Register', link: '/register' }
+        
     ]
     return (
         <header className="max-w-screen-2xl xl-px-2 fixed top-0 left-0 right-0 transition-all duration-300 ease-in-out z-10000 py-4">
