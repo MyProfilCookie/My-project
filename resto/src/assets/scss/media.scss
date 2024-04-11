@@ -35,3 +35,18 @@
         grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 }
+.media-justify-between {
+    @media (min-width: 768px) {
+        justify-content: space-between;
+    }
+}
+.media-mb-10 {
+    @media (min-width: 768px) {
+        margin-bottom: 2.5rem;
+    }
+}
+.media-mt-10 {
+    @media (min-width: 768px) {
+        margin-top: 2.5rem;
+    }
+}

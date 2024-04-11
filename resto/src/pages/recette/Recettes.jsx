@@ -98,9 +98,9 @@ function Recettes() {
       <div className="section-container align-center">
         {/* bouton de recherche */}
         <div>Bouton de recherche</div>
-        <div className='flex justify-between items-center'>
+        <div className='flex flex-wrap media-justify-between items-center flew-row mx-auto'>
 
-          <div className='flex mb-10 mt-10 flew-row gap-4'>
+          <div className='flex media-mb-10 media-mt-10  gap-4 flex-wrap'>
 
             <button onClick={showAll} className={search === 'toutes' ? 'button active' : 'btn'}>toutes</button>
             <button onClick={() => filterRecettes('Pains et viennoiserie')} className={search === 'Pains et viennoiserie' ? 'button active' : 'btn'}>Pains et viennoiserie</button>
@@ -112,7 +112,7 @@ function Recettes() {
 
           </div>
           {/* afficher le nombre de recettes disponibles par categorie dans la barre de recherche */}
-          <div className='mb-10 flex'>
+          <div className='media-mb-10 media-mt-10 flex'>
             <select className="form-select form-select-lg btn"
               name="sort" id="sort"
               onChange={(e) => showCategory(e.target.value)}
