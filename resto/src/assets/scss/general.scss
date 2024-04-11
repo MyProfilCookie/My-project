@@ -909,7 +909,7 @@ a {
   color: #000;
 }
 a:hover {
- @include hover-scale(1.1)
+  @include hover-scale(1.1);
 }
 .hover-border-red {
   border: none;
@@ -926,8 +926,8 @@ a:hover {
 }
 .button {
   border: none;
- background-color: transparent;
-  cursor: pointer
+  background-color: transparent;
+  cursor: pointer;
 }
 .active {
   color: #ff4747;

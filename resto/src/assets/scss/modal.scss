@@ -1,0 +1,163 @@
+.button-modal {
+  font-family: inherit;
+  cursor: pointer;
+  background: #f44336;
+  color: #fff;
+  border: 0;
+  border-radius: 20px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.main-container,
+.modal-window,
+.modal-container {
+  transition: 0.5s;
+}
+
+.modal-window {
+  position: fixed;
+  top: 50%;
+  right: -300px;
+  translate: 50% -50%;
+  background: #ffffff;
+  color: #000000;
+  padding: 48px 40px;
+  width: 300px;
+  height: 118px;
+  border-radius: 12px;
+}
+
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  opacity: 0;
+  visibility: hidden;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+body.open-modal .modal-container {
+  visibility: visible;
+  opacity: 1;
+}
+
+body.open-modal .card-container {
+  animation: card-container-in 1s both;
+}
+
+body.open-modal > .main-container {
+  scale: 0.75;
+}
+
+body.open-modal .modal-window {
+  animation: modal-window-in 1s both;
+}
+
+h2 {
+  margin: 0 0 8px;
+  font-weight: 900;
+  font-size: 21px;
+}
+
+p {
+  margin: 0;
+}
+
+@keyframes modal-window-in {
+  0%,
+  50% {
+    width: 118px;
+    border-radius: 50%;
+  }
+  55%,
+  100% {
+    right: 50%;
+  }
+  60% {
+    width: 300px;
+    border-radius: 12px;
+  }
+  75% {
+    translate: 50% -50%;
+  }
+}
+
+@keyframes card-container-in {
+  0%,
+  75% {
+    opacity: 0;
+  }
+  85%,
+  100% {
+    opacity: 1;
+  }
+}
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.modal-box {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 90%;
+  width: 400px;
+
+  h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .modal-action {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+  }
+
+  .btn {
+    padding: 8px 16px;
+    margin-left: 10px;
+    border: none;
+    background-color: #4caf50;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #45a049;
+    }
+  }
+
+  .btn-close {
+    padding: 8px 16px;
+    border: none;
+    background-color: #f44336;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #d32f2f;
+    }
+  }
+}

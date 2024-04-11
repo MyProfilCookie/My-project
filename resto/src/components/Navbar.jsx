@@ -3,8 +3,6 @@ import React from 'react'
 import logo from '/logo.svg'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUser } from '@fortawesome/free-solid-svg-icons'
-import { faUserPlus } from '@fortawesome/free-solid-svg-icons'
-import { faUserMinus } from '@fortawesome/free-solid-svg-icons'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
 import { NavLink } from 'react-router-dom'
 import { useState, useEffect } from 'react'
@@ -26,6 +24,14 @@ const Navbar = () => {
         handleScroll();
     }, []);
 
+    const [isModalOpen, setIsModalOpen] = useState();
+    const openModal = () => {
+        setIsModalOpen(true);
+    };
+
+    const closeModal = () => {
+        setIsModalOpen(false);
+    };
 
 
     const navItems = [
@@ -34,9 +40,7 @@ const Navbar = () => {
         { id: 2, name: 'Contact', link: '/contact' },
         { id: 3, name: 'About', link: '/about' },
         { id: 4, name: 'Recettes', link: '/recettes' },
-        { id: 5, name: 'Login', link: '/login' },
-        { id: 6, name: 'Register', link: '/register' }
-        
+
     ]
     return (
         <header className="max-w-screen-2xl xl-px-2 fixed top-0 left-0 right-0 transition-all duration-300 ease-in-out z-10000 py-4">
@@ -45,11 +49,11 @@ const Navbar = () => {
                 <div className="navbar-start">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
-                            <FontAwesomeIcon icon={faBars} width={200} />
+                            <FontAwesomeIcon icon={faBars} size="2xl" />
                         </div>
                         <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
                             {navItems.map(item => (
-                                <li key={item.id}><NavLink to={item.link}>{item.name}</NavLink></li>
+                                <li className="py-1 mt-3 mb-3" key={item.id}><NavLink to={item.link}>{item.name}</NavLink></li>
                             ))}
 
                         </ul>
@@ -77,10 +81,29 @@ const Navbar = () => {
                         </li>
                     </ul>
                 </div>
-                <div className="navbar-end">
-                    <NavLink to="/register" className="btn btn-ghost btn-circle"><FontAwesomeIcon icon={faUserPlus} /></NavLink>
-                    <NavLink to="/login" className="btn btn-ghost btn-circle"><FontAwesomeIcon icon={faUser} /></NavLink>
-                    <NavLink to="/deconnexion" className="btn btn-ghost btn-circle"><FontAwesomeIcon icon={faUserMinus} /></NavLink>
+                <div className="navbar-end ">
+
+                    <button
+                        onClick={openModal}
+                        className='btn-primary-login rounded-full button-modal'
+                    >
+                        <FontAwesomeIcon icon={faUser} /> Login
+                    </button>
+                    {isModalOpen && (
+                        <div className="modal-overlay">
+                            <div className="modal">
+                                <div className="modal-box">
+                                    <h3 className="font-bold text-lg">Hello!</h3>
+                                    <p className="py-4">Press ESC key or click the button below to close</p>
+                                    <div className="modal-action">
+                                        <form method="dialog">
+                                            <button onClick={closeModal} className="btn btn-close">Close</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    )}
                 </div>
             </div>
         </header>
