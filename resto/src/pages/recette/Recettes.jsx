@@ -7,6 +7,8 @@ function Recettes() {
   const [filteredRecettes, setFilteredRecettes] = React.useState([]);
   const [search, setSearch] = React.useState('toutes');
   const [searchOptions, setSearchOptions] = React.useState('toutes');
+  const [currentPage, setCurrentPage] = React.useState(1);
+  // d'éléments par page
 
   useEffect(
     () => {
