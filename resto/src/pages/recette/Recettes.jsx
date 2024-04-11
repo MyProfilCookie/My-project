@@ -8,7 +8,7 @@ function Recettes() {
   const [search, setSearch] = React.useState('toutes');
   const [searchOptions, setSearchOptions] = React.useState('toutes');
   const [currentPage, setCurrentPage] = React.useState(1);
-  const [itemsPerPage, setItemsPerPage] = React.useState(12);
+  const [itemsPerPage] = React.useState(12);
   // d'éléments par page
 
   useEffect(
@@ -67,10 +67,6 @@ function Recettes() {
   const indexOfLastRecette = currentPage * itemsPerPage;
   const indexOfFirstRecette = indexOfLastRecette - itemsPerPage;
   const currentRecettes = filteredRecettes.slice(indexOfFirstRecette, indexOfLastRecette);
-  const pageNumbers = [];
-  for (let i = 1; i <= Math.ceil(filteredRecettes.length / itemsPerPage); i++) {
-    pageNumbers.push(i);
-  }
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
 
@@ -132,11 +128,22 @@ function Recettes() {
         </div>
         {/* faisons afficher la liste de nos recettes */}
         <div className='grid grid-cols-2 media-grid-cols-3 lg-grid-cols-4 gap-4 mb-10'>
-          {filteredRecettes.map((item) => (
+          {currentRecettes.map((item) => (
             <Cards key={item._id} item={item} />
           ))}
         </div>
 
+      </div>
+      <div className='flex justify-center mb-10 gap-4'>
+          {
+            Array.from({ length: Math.ceil(filteredRecettes.length / itemsPerPage)}).map((_, index ) => (
+              <button key={index + 1} 
+              onClick={() => paginate(index + 1)} 
+              className={`mx-1 px-2 py-1 rounded-full ${currentPage === index + 1 ? 'btn-primary' : 'btn'}`}>
+                {index + 1}
+              </button>
+            ))
+          }
       </div>
 
 
