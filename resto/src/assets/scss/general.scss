@@ -650,27 +650,72 @@ h6 {
   padding: 0;
 }
 .butn {
-    display: inline-flex;
-    height: 3rem;
-    min-height: 3rem;
-    flex-shrink: 0;
-    cursor: pointer;
-    user-select: none;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    border-color: transparent;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    text-align: center;
-    font-size: .875rem;
-    line-height: 1em;
-    gap: .5rem;
-    font-weight: 600;
-    text-decoration-line: none;
-    transition-duration: .2s;
-    transition-timing-function: cubic-bezier(0,0,.2,1);
-    border-radius: 999999px;
+  display: inline-flex;
+  height: 3rem;
+  min-height: 3rem;
+  flex-shrink: 0;
+  cursor: pointer;
+  user-select: none;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  border-color: transparent;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  text-align: center;
+  font-size: 0.875rem;
+  line-height: 1em;
+  gap: 0.5rem;
+  font-weight: 600;
+  text-decoration-line: none;
+  transition-duration: 0.2s;
+  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  border-radius: 999999px;
+}
+.btn-outline-google {
+  background-color: transparent;
+  &:hover {
+    transform: translateY(-10%);
+    scale: 1.1;
+    background-color: #f44336;
+    color: #fff;
+  }
+}
+.btn-outline-git {
+  background-color: transparent;
+  &:hover {
+    transform: translateY(-10%);
+    scale: 1.1;
+    background-color: #000;
+    color: #fff;
+  }
+}
+.btn-outline-facebook {
+  background-color: transparent;
+  &:hover {
+    transform: translateY(-10%);
+    scale: 1.1;
+    background-color: #1877f2;
+    color: #fff;
+  }
+}
+.btn-outline-twitter {
+  background-color: transparent;
+  &:hover {
+    transform: translateY(-10%);
+    scale: 1.1;
+    background-color: #000;
+    color: #fff;
+  }
+}
+.btn-outline-youtube {
+  background-color: transparent;
+  &:hover {
+    background-color: #ff0000;
+    color: #fff;
+  }
+  background-color: #000;
+  color: #fff;
 }
 .hover-translate-y-2 {
   transition-property: transform;
