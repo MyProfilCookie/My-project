@@ -449,6 +449,9 @@ h6 {
 .w-12 {
   width: 3rem;
 }
+.w-14 {
+  width: 3.5rem;
+}
 .w-16 {
   width: 4rem;
 }
@@ -1074,7 +1077,17 @@ a:hover {
 .active {
   color: #ff4747;
   border-bottom: 2px solid #ff4747;
-  font-weight: 700;
-  font-size: 1.25rem;
+  font-weight: 900;
   transition: all 0.3s ease-in-out;
+}
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.py-12 {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+.py-16 {
+  padding-top: 4rem;
 }

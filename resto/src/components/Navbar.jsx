@@ -50,7 +50,7 @@ const Navbar = () => {
                         </ul>
                     </div>
                     <a href='/'>
-                        <img src={logo} alt="logo" width={30} />
+                        <img src={logo} alt="logo" width={100} />
                     </a>
                 </div>
                 <div className="navbar-center hidden lg:flex px-4">

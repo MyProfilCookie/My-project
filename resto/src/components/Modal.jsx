@@ -34,7 +34,7 @@ function Modal() {
                         <div className="modal-box">
                             <div className="modal-action flex flex-col justify-center mt-0">
                                 <form className="card-body" method='dialog'>
-                                    <h3 className="text-center font-bold "><FontAwesomeIcon icon={faCakeCandles} className='text-red hover-scale-110 transition duration-300' /> Se connecter</h3>
+                                    <h3 className="font-bold flex justify-center align-center"><img src="./logo.svg" alt="logo" className="w-14" />Se connecter</h3>
                                     {/* <button onClick={closeModal} className="btn btn-close">Close</button> */}
                                     <div className="form-control">
                                         <label className="label">
