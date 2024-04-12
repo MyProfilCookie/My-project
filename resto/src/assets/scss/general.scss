@@ -629,6 +629,49 @@ h6 {
 .flex-row {
   flex-direction: row;
 }
+.underline {
+  text-decoration: underline;
+}
+.btn-outline {
+  border-width: 2px;
+  border-style: solid;
+  border-color: #f44336;
+  color: #f44336;
+  background-color: transparent;
+  &:hover {
+    background-color: #f44336;
+    color: #fff;
+  }
+}
+.btn-circle {
+  height: 3rem;
+  width: 3rem;
+  border-radius: 9999px;
+  padding: 0;
+}
+.butn {
+    display: inline-flex;
+    height: 3rem;
+    min-height: 3rem;
+    flex-shrink: 0;
+    cursor: pointer;
+    user-select: none;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    border-color: transparent;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    text-align: center;
+    font-size: .875rem;
+    line-height: 1em;
+    gap: .5rem;
+    font-weight: 600;
+    text-decoration-line: none;
+    transition-duration: .2s;
+    transition-timing-function: cubic-bezier(0,0,.2,1);
+    border-radius: 999999px;
+}
 .hover-translate-y-2 {
   transition-property: transform;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);

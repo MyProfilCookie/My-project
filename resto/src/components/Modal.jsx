@@ -7,9 +7,6 @@ import { faUser } from '@fortawesome/free-solid-svg-icons'
 import {faCakeCandles} from '@fortawesome/free-solid-svg-icons'
 import { Link } from 'react-router-dom'
 
-
-
-
 function Modal() {
     const [isModalOpen, setIsModalOpen] = useState();
     const openModal = () => {
@@ -54,9 +51,13 @@ function Modal() {
                                         <input type='submit' value='Login' className="btn btn-primary mx-auto"/>
                                     </div>
                                     <div className="form-control mx-auto">
-                                        <p className="text-center">Vous n’avez pas de compte ? <Link to='/register' className='link'>S’inscrire</Link></p>
+                                        <p className="text-center">Vous n’avez pas de compte ? <Link to='/register' className='underline text-red font-bold mt-2'>S’inscrire</Link></p>
                                     </div>
                                 </form>
+                                <div>
+                                     <button onClick={closeModal} className="btn btn-circle"><svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" /></svg>
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
