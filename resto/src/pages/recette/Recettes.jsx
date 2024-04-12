@@ -95,7 +95,7 @@ function Recettes() {
         </div>
       </div>
 
-      <div className="section-container align-center">
+      <div className="section-container align-center mx-auto">
         {/* bouton de recherche */}
         <div>Bouton de recherche</div>
         <div className='flex flex-wrap media-justify-between items-center flew-row mx-auto'>

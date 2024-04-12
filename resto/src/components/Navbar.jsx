@@ -2,10 +2,10 @@
 import React from 'react'
 import logo from '/logo.svg'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faUser } from '@fortawesome/free-solid-svg-icons'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
 import { NavLink } from 'react-router-dom'
 import { useState, useEffect } from 'react'
+import Modal from './Modal'
 
 
 const Navbar = () => {
@@ -24,16 +24,6 @@ const Navbar = () => {
         handleScroll();
     }, []);
 
-    const [isModalOpen, setIsModalOpen] = useState();
-    const openModal = () => {
-        setIsModalOpen(true);
-    };
-
-    const closeModal = () => {
-        setIsModalOpen(false);
-    };
-
-
     const navItems = [
         { id: 1, name: 'Home', link: '/' },
         // faire un menu detail pour la navbar
@@ -42,6 +32,7 @@ const Navbar = () => {
         { id: 4, name: 'Recettes', link: '/recettes' },
 
     ]
+
     return (
         <header className="max-w-screen-2xl xl-px-2 fixed top-0 left-0 right-0 transition-all duration-300 ease-in-out z-10000 py-4">
 
@@ -81,29 +72,8 @@ const Navbar = () => {
                         </li>
                     </ul>
                 </div>
-                <div className="navbar-end ">
-
-                    <button
-                        onClick={openModal}
-                        className='btn-primary-login rounded-full button-modal'
-                    >
-                        <FontAwesomeIcon icon={faUser} /> Login
-                    </button>
-                    {isModalOpen && (
-                        <div className="modal-overlay">
-                            <div className="modal">
-                                <div className="modal-box">
-                                    <h3 className="font-bold text-lg">Hello!</h3>
-                                    <p className="py-4">Press ESC key or click the button below to close</p>
-                                    <div className="modal-action">
-                                        <form method="dialog">
-                                            <button onClick={closeModal} className="btn btn-close">Close</button>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    )}
+                <div className="navbar-end">
+                    <Modal />
                 </div>
             </div>
         </header>

@@ -50,3 +50,8 @@
         margin-top: 2.5rem;
     }
 }
+.media-full {
+    @media (min-width: 768px) {
+        width: 100%;
+    }
+}
