@@ -26,7 +26,7 @@
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  max-width: 90%;
+  max-width: 100%;
   width: 400px;
 
   h3 {
@@ -82,6 +82,7 @@
 .modal-box {
   @media (min-width:320px) and (max-width: 768px) {
       width: 100%;
+      border-radius: 20px 20px 0 0;
       height: 30%;
   }
 }
