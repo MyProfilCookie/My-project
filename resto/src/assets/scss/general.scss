@@ -30,6 +30,10 @@ h6 {
   margin-left: 1rem;
   margin-right: 1rem;
 }
+.mx-2 {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
 
 .px-4 {
   padding-left: 1rem;
@@ -680,7 +684,7 @@ h6 {
   &:hover {
     transform: translateY(-10%);
     scale: 1.1;
-    background-color: #f44336;
+    background: linear-gradient(to bottom , #478cfd, #34a853, #fbbc05, #ff4030);
     color: #fff;
   }
 }
@@ -719,6 +723,15 @@ h6 {
   }
   background-color: #000;
   color: #fff;
+}
+.btn-outline-instagram {
+  background-color: transparent;
+  &:hover {
+    scale: 1.1;
+    background: linear-gradient(#405de6, #5b51db, #b33ab4, #c135b4, #e1306c, #fd1f1f);
+    color: #fff;
+    transform: translateY(-10%);
+  }
 }
 .hover-translate-y-2 {
   transition-property: transform;

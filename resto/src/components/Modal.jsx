@@ -6,9 +6,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUser } from '@fortawesome/free-solid-svg-icons'
 import {faCakeCandles} from '@fortawesome/free-solid-svg-icons'
 import { faGoogle } from '@fortawesome/free-brands-svg-icons'
-import { faGithubAlt } from '@fortawesome/free-brands-svg-icons'
+import { faInstagram } from '@fortawesome/free-brands-svg-icons'
 import { faFacebook } from '@fortawesome/free-brands-svg-icons'
-import { faXTwitter } from '@fortawesome/free-brands-svg-icons'
+import { faTiktok} from '@fortawesome/free-brands-svg-icons'
 import { Link } from 'react-router-dom'
 
 function Modal() {
@@ -58,18 +58,18 @@ function Modal() {
                                         <p className="text-center">Vous n’avez pas de compte ? <Link to='/register' className='underline text-red font-bold mt-2'>S’inscrire</Link></p>
                                     </div>
                                 </form>
-                                <div className='flex justify-center mx-4'>
+                                <div className='flex justify-center'>
                                     <button className="butn btn-circle btn-outline-google ">
-                                    <FontAwesomeIcon icon={faGoogle} size='xl' />    
+                                    <FontAwesomeIcon icon={faGoogle} size='2xl' />    
                                     </button>
-                                    <button className="butn btn-circle btn-outline-git ">
-                                    <FontAwesomeIcon icon={faGithubAlt} size='2xl' />    
+                                    <button className="butn btn-circle btn-outline-instagram mx-1 ">
+                                    <FontAwesomeIcon icon={faInstagram} size='2xl' />    
                                     </button>
-                                    <button className="butn btn-circle btn-outline-facebook ">
+                                    <button className="butn btn-circle btn-outline-facebook mx-1 ">
                                     <FontAwesomeIcon icon={faFacebook} size='2xl' />   
                                     </button>
-                                    <button className="butn btn-circle btn-outline-twitter ">
-                                    <FontAwesomeIcon icon={faXTwitter} size='2xl' />    
+                                    <button className="butn btn-circle btn-outline-twitter mx-1 ">
+                                    <FontAwesomeIcon icon={faTiktok} size='2xl' />    
                                     </button>
                                 </div>
 
