@@ -60,8 +60,8 @@ function Modal() {
                                         <label className="label">
                                             <span className="label-text">Password</span>
                                         </label>
-                                        <input type="password" placeholder="password" className="input input-bordered" required 
-                                            {...register('password', { required: true })}/>
+                                        <input type="password" placeholder="password" className="input input-bordered" required
+                                            {...register('password', { required: true })} />
                                         <label className="label mt-2">
                                             <a href="#" className="label-text-alt link link-hover ">Forgot password?</a>
                                         </label>
@@ -74,16 +74,16 @@ function Modal() {
                                     </div>
                                 </form>
                                 <div className='flex justify-center'>
-                                    <button className="butn btn-circle btn-outline-google ">
+                                    <button className="butn btn-circle bton-outline-google hover-scale-110 mx-1 ">
                                         <FontAwesomeIcon icon={faGoogle} size='2xl' />
                                     </button>
-                                    <button className="butn btn-circle btn-outline-instagram mx-1 ">
+                                    <button className="butn btn-circle bton-outline-instagram hover-scale-110 mx-1">
                                         <FontAwesomeIcon icon={faInstagram} size='2xl' />
                                     </button>
-                                    <button className="butn btn-circle btn-outline-facebook mx-1 ">
+                                    <button className="butn btn-circle bton-outline-facebook hover-scale-110 mx-1 ">
                                         <FontAwesomeIcon icon={faFacebook} size='2xl' />
                                     </button>
-                                    <button className="butn btn-circle btn-outline-twitter mx-1 ">
+                                    <button className="butn btn-circle bton-outline-tiktok hover-scale-110 mx-1 ">
                                         <FontAwesomeIcon icon={faTiktok} size='2xl' />
                                     </button>
                                 </div>

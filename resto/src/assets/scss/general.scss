@@ -680,6 +680,12 @@ h6 {
 .text-center {
   text-align: center;
 }
+.text-white {
+  color: #fff;
+}
+.text-black {
+  color: #000;
+}
 .p-5 {
   padding: 1.25rem;
 }
@@ -724,6 +730,32 @@ h6 {
   border-radius: 9999px;
   padding: 0;
 }
+.bton-outline-tiktok {
+  border-width: 2px;
+  border-style: solid;
+  color: #000;
+  background-color: transparent;
+}
+.bton-outline-google {
+  border-width: 2px;
+  border-style: solid;
+  color: #ff4747;
+  background-color: transparent;
+}
+.bton-outline-facebook {
+  border-width: 2px;
+  border-style: solid;
+  border-color: #fff;
+  color: blue;
+  background-color: transparent;
+}
+.bton-outline-instagram {
+  border-width: 2px;
+  border-style: solid;
+  border-color: #fff;
+  color: #000;
+  background-color: transparent;
+}
 .butn {
   display: inline-flex;
   height: 3rem;
@@ -746,60 +778,6 @@ h6 {
   transition-duration: 0.2s;
   transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
   border-radius: 999999px;
-}
-.btn-outline-google {
-  background-color: transparent;
-  &:hover {
-    transform: translateY(-10%);
-    scale: 1.1;
-    background: linear-gradient(to bottom , #478cfd, #34a853, #fbbc05, #ff4030);
-    color: #fff;
-  }
-}
-.btn-outline-git {
-  background-color: transparent;
-  &:hover {
-    transform: translateY(-10%);
-    scale: 1.1;
-    background-color: #000;
-    color: #fff;
-  }
-}
-.btn-outline-facebook {
-  background-color: transparent;
-  &:hover {
-    transform: translateY(-10%);
-    scale: 1.1;
-    background-color: #1877f2;
-    color: #fff;
-  }
-}
-.btn-outline-twitter {
-  background-color: transparent;
-  &:hover {
-    transform: translateY(-10%);
-    scale: 1.1;
-    background-color: #000;
-    color: #fff;
-  }
-}
-.btn-outline-youtube {
-  background-color: transparent;
-  &:hover {
-    background-color: #ff0000;
-    color: #fff;
-  }
-  background-color: #000;
-  color: #fff;
-}
-.btn-outline-instagram {
-  background-color: transparent;
-  &:hover {
-    scale: 1.1;
-    background: linear-gradient(#405de6, #5b51db, #b33ab4, #c135b4, #e1306c, #fd1f1f);
-    color: #fff;
-    transform: translateY(-10%);
-  }
 }
 .hover-translate-y-2 {
   transition-property: transform;
@@ -1186,10 +1164,12 @@ blockquote {
 // mise en place de la mixin hover-link pour un padding et d'un background gris au survole d'un lien
 a {
   text-decoration: none;
-  color: #fff;
-}
-a:hover {
-  @include hover-scale(1.1);
+  color: #000;
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    @include hover-scale(1.1);
+    text-decoration: none;
+  }
 }
 .hover-border-red {
   border: none;
