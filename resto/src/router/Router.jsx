@@ -2,6 +2,7 @@ import { createBrowserRouter } from "react-router-dom"
 import Main from "../layout/Main"
 import Home from "../pages/home/Home"
 import Recettes from "../pages/recette/Recettes"
+import Register from "../components/Register"
 
 
 const router = createBrowserRouter([
@@ -29,32 +30,33 @@ const router = createBrowserRouter([
                 path: "*",
                 element: <div>404</div>
             },
-            {
-                path: "/register",
-                element: <div>Register</div>
-            },
-            {
-                path: "/login",
-                element: <div>Login</div>
-            },
+            
             {
                 path: "/dashboard",
                 element: <div>Dashboard</div>
             },
             {
-                path:"recettes/nouvelles",
+                path: "recettes/nouvelles",
                 element: <div>Nouvelle</div>
             },
             {
-                path:"recettes/populaires",
+                path: "recettes/populaires",
                 element: <div>Populaire</div>
             },
             {
-                path:"recettes/best",
+                path: "recettes/best",
                 element: <div>Best</div>
             }
         ]
-    }
+    },
+    {
+        path: "/register",
+        element: <Register />
+    },
+    {
+        path: "/login",
+        element: <div>Login</div>
+    },
 ])
 
 export default router

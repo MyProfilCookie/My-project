@@ -116,6 +116,10 @@ h6 {
   padding-top: 6rem;
   padding-bottom: 6rem;
 }
+.py-36 {
+  padding-top: 9rem;
+  padding-bottom: 9rem;
+}
 .py-48 {
   padding-top: 12rem;
   padding-bottom: 12rem;
@@ -358,6 +362,70 @@ h6 {
 }
 .right-3 {
   right: 0.75rem;
+}
+.right-15 {
+  right: 3.75rem;
+}
+.top-15 {
+  top: 3.75rem;
+}
+.top-18 {
+  top: 4.5rem;
+}
+.right-18 {
+  right: 4.5rem;
+}
+.top-25 {
+  top: 6.25rem;
+}
+.top-30 {
+  top: 7.5rem;
+}
+.top-35 {
+  top: 8.75rem;
+}
+.top-40 {
+  top: 10rem;
+}
+.top-45 {
+  top: 11.25rem;
+}
+.top-50 {
+  top: 12.5rem;
+}
+.top-55 {
+  top: 13.75rem;
+}
+.top-60 {
+  top: 15rem;
+}
+.right-25 {
+  right: 6.25rem;
+}
+.right-28 {
+  right: 7rem;
+}
+
+.right-30 {
+  right: 7.5rem;
+}
+.right-35 {
+  right: 8.75rem;
+}
+.right-40 {
+  right: 10rem;
+}
+.right-45 {
+  right: 11.25rem;
+}
+.right-50 {
+  right: 12.5rem;
+}
+.right-55 {
+  right: 13.75rem;
+}
+.right-60 {
+  right: 15rem;
 }
 .transition-all {
   transition-property: all;
@@ -1010,6 +1078,57 @@ figure {
 .mt-8 {
   margin-top: 2rem;
 }
+.mb-8 {
+  margin-bottom: 2rem;
+}
+.mb-10 {
+  margin-bottom: 2.5rem;
+}
+.mb-12 {
+  margin-bottom: 3rem;
+}
+.mb-16 {
+  margin-bottom: 4rem;
+}
+.mb-18 {
+  margin-bottom: 4.5rem;
+}
+.mb-20 {
+  margin-bottom: 5rem;
+}
+.mb-24 {
+  margin-bottom: 6rem;
+}
+.mb-28 {
+  margin-bottom: 7rem;
+}
+.mb-32 {
+  margin-bottom: 8rem;
+}
+.mb-40 {
+  margin-bottom: 10rem;
+}
+.mb-48 {
+  margin-bottom: 12rem;
+}
+.mb-64 {
+  margin-bottom: 16rem;
+}
+.mb-72 {
+  margin-bottom: 18rem;
+}
+.mb-80 {
+  margin-bottom: 20rem;
+}
+.mb-96 {
+  margin-bottom: 24rem;
+}
+.mt-6 {
+  margin-top: 1.5rem;
+}
+.mt-8 {
+  margin-top: 2rem;
+}
 .mt-10 {
   margin-top: 2.5rem;
 }
@@ -1055,6 +1174,9 @@ figure {
 .m-12 {
   margin-right: 3rem;
 }
+.m-20 {
+  margin-right: 5rem;
+}
 .space-x-5 {
   gap: 1.25rem;
 }
@@ -1064,7 +1186,7 @@ blockquote {
 // mise en place de la mixin hover-link pour un padding et d'un background gris au survole d'un lien
 a {
   text-decoration: none;
-  color: #000;
+  color: #fff;
 }
 a:hover {
   @include hover-scale(1.1);
@@ -1103,4 +1225,16 @@ a:hover {
 }
 .py-16 {
   padding-top: 4rem;
+}
+.max-w-md {
+  max-width: 28rem;
+}
+.shadow-4xl {
+  box-shadow: -1px 1px 20px 15px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+}
+.top-2 {
+  top: 0.5rem;
+}
+.right-2 {
+  right: 0.5rem;
 }

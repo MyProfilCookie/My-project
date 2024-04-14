@@ -4,14 +4,25 @@ import React from 'react'
 import { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUser } from '@fortawesome/free-solid-svg-icons'
-import {faCakeCandles} from '@fortawesome/free-solid-svg-icons'
+import { faCakeCandles } from '@fortawesome/free-solid-svg-icons'
 import { faGoogle } from '@fortawesome/free-brands-svg-icons'
 import { faInstagram } from '@fortawesome/free-brands-svg-icons'
 import { faFacebook } from '@fortawesome/free-brands-svg-icons'
-import { faTiktok} from '@fortawesome/free-brands-svg-icons'
+import { faTiktok } from '@fortawesome/free-brands-svg-icons'
 import { Link } from 'react-router-dom'
+import { useForm } from 'react-hook-form'
 
 function Modal() {
+    const {
+        register,
+        handleSubmit,
+        watch,
+        formState: { errors },
+    } = useForm()
+    const onSubmit = (data) => {
+        console.log(data)
+    }
+
     const [isModalOpen, setIsModalOpen] = useState();
     const openModal = () => {
         setIsModalOpen(true);
@@ -32,27 +43,31 @@ function Modal() {
                 <div className="modal-overlay">
                     <div className="modal">
                         <div className="modal-box">
-                            <div className="modal-action flex flex-col justify-center mt-0">
-                                <form className="card-body" method='dialog'>
-                                    <h3 className="font-bold flex justify-center align-center"><img src="./logo.svg" alt="logo" className="w-14" />Se connecter</h3>
-                                    {/* <button onClick={closeModal} className="btn btn-close">Close</button> */}
+                            <div className="modal-action flex flex-col justify-center mt-0 relative">
+                                <form
+                                    onSubmit={handleSubmit(onSubmit)} className="card-body" method='dialog'>
+                                    <h3 className="font-bold flex justify-center align-center 
+                                    "><img src="./logo.svg" alt="logo" className="w-14" />Se connecter</h3>
+                                    <button onClick={closeModal} className="bton cursor-pointer hover-scale-110 buton-circle absolute top-0 right-0">x</button>
                                     <div className="form-control">
                                         <label className="label">
                                             <span className="label-text">Email</span>
                                         </label>
-                                        <input type="email" placeholder="email" className="input input-bordered" required />
+                                        <input type="email" placeholder="email" className="input input-bordered" required
+                                            {...register('email', { required: true })} />
                                     </div>
                                     <div className="form-control">
                                         <label className="label">
                                             <span className="label-text">Password</span>
                                         </label>
-                                        <input type="password" placeholder="password" className="input input-bordered" required />
+                                        <input type="password" placeholder="password" className="input input-bordered" required 
+                                            {...register('password', { required: true })}/>
                                         <label className="label mt-2">
                                             <a href="#" className="label-text-alt link link-hover ">Forgot password?</a>
                                         </label>
                                     </div>
                                     <div className="form-control mt-6">
-                                        <input type='submit' value='Login' className="btn btn-primary mx-auto"/>
+                                        <input type='submit' value='Login' className="btn btn-primary mx-auto" />
                                     </div>
                                     <div className="form-control mx-auto">
                                         <p className="text-center">Vous n’avez pas de compte ? <Link to='/register' className='underline text-red font-bold mt-2'>S’inscrire</Link></p>
@@ -60,16 +75,16 @@ function Modal() {
                                 </form>
                                 <div className='flex justify-center'>
                                     <button className="butn btn-circle btn-outline-google ">
-                                    <FontAwesomeIcon icon={faGoogle} size='2xl' />    
+                                        <FontAwesomeIcon icon={faGoogle} size='2xl' />
                                     </button>
                                     <button className="butn btn-circle btn-outline-instagram mx-1 ">
-                                    <FontAwesomeIcon icon={faInstagram} size='2xl' />    
+                                        <FontAwesomeIcon icon={faInstagram} size='2xl' />
                                     </button>
                                     <button className="butn btn-circle btn-outline-facebook mx-1 ">
-                                    <FontAwesomeIcon icon={faFacebook} size='2xl' />   
+                                        <FontAwesomeIcon icon={faFacebook} size='2xl' />
                                     </button>
                                     <button className="butn btn-circle btn-outline-twitter mx-1 ">
-                                    <FontAwesomeIcon icon={faTiktok} size='2xl' />    
+                                        <FontAwesomeIcon icon={faTiktok} size='2xl' />
                                     </button>
                                 </div>
 

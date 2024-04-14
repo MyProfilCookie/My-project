@@ -82,7 +82,7 @@ function Recettes() {
 
       <div className='container mx-auto px-4 xl-px-24 max-w-screen-2xl b-gradient-to-b'>
 
-        <div className='py-48 flex flex-col items-center justify-center gap-8'>
+        <div className='py-36 flex flex-col items-center justify-center gap-8'>
 
           <div className='text-center space-y-7 px-4'>
             <h2 className='media-text-5xl text-4xl font-bold media-leading-snug leading-snug'> La pâtisserie <span className='text-red'>gourmande</span> <span className='text-red'>elit</span>.</h2>
@@ -100,7 +100,7 @@ function Recettes() {
         <div>Bouton de recherche</div>
         <div className='flex flex-wrap media-justify-between items-center flew-row mx-auto'>
 
-          <div className='flex media-mb-10 media-mt-10  gap-4 flex-wrap'>
+          <div className='flex media-mb-10 media-mt-10 gap-4 flex-wrap'>
 
             <button onClick={showAll} className={search === 'toutes' ? 'button active' : 'btn'}>toutes</button>
             <button onClick={() => filterRecettes('Pains et viennoiserie')} className={search === 'Pains et viennoiserie' ? 'button active' : 'btn'}>Pains et viennoiserie</button>

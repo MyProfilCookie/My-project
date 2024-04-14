@@ -41,7 +41,7 @@ function Cards({ item }) {
                         </p>
 
                        <Link to={`/recettes/${item.id}`}>
-                            <button className="btn btn-primary">Voir plus</button>
+                            <button className="bton bton-primary">Voir plus</button>
                         </Link>
                     </div>
                 </div>
