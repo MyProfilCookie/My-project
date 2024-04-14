@@ -989,8 +989,8 @@ figure {
   // border-radius: 37.5px 37.5px 10px 42.5px;
   border-radius: 37.5px 37.5px 10px 42.5px;
   border: 2px solid #f05c0d;
-  width: 75px;
-  height: 75px;
+  width: 50px;
+  height: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1210,7 +1210,9 @@ a {
   max-width: 28rem;
 }
 .shadow-4xl {
-  box-shadow: -1px 1px 20px 15px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+  box-shadow:
+    -1px 1px 20px 15px rgba(0, 0, 0, 0.1),
+    0 8px 10px -6px rgba(0, 0, 0, 0.1);
 }
 .top-2 {
   top: 0.5rem;
