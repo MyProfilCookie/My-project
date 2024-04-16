@@ -1,24 +1,23 @@
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable no-unused-vars */
-import React from 'react'
+import React, { useContext } from 'react'
 import { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUser } from '@fortawesome/free-solid-svg-icons'
-import { faCakeCandles } from '@fortawesome/free-solid-svg-icons'
-import { faGoogle } from '@fortawesome/free-brands-svg-icons'
-import { faInstagram } from '@fortawesome/free-brands-svg-icons'
-import { faFacebook } from '@fortawesome/free-brands-svg-icons'
-import { faTiktok } from '@fortawesome/free-brands-svg-icons'
+import { faGoogle, faInstagram, faFacebook, faTiktok } from '@fortawesome/free-brands-svg-icons'
 import { Link } from 'react-router-dom'
 import { useForm } from 'react-hook-form'
+import { AuthContext } from '../contexts/AuthProvider'
 
 function Modal() {
     const {
         register,
         handleSubmit,
-        watch,
         formState: { errors },
     } = useForm()
+
+    
+      const {signUpWithGoogle} = useContext(AuthContext)
     const onSubmit = (data) => {
         console.log(data)
     }
@@ -31,6 +30,16 @@ function Modal() {
     const closeModal = () => {
         setIsModalOpen(false);
     };
+    // google signin
+    const handleLogin=()=>{
+        signUpWithGoogle().then((result) => {
+            const user = result.user;
+            alert('login successful')
+        }).catch((error) => {
+            console.log(error)
+        });
+    }
+
     return (
         <div>
             <button
@@ -74,7 +83,7 @@ function Modal() {
                                     </div>
                                 </form>
                                 <div className='flex justify-center'>
-                                    <button className="butn btn-circle bton-outline-google hover-scale-110 mx-1 ">
+                                    <button className="butn btn-circle bton-outline-google hover-scale-110 mx-1" onClick={handleLogin}>
                                         <FontAwesomeIcon icon={faGoogle} size='2xl' />
                                     </button>
                                     <button className="butn btn-circle bton-outline-instagram hover-scale-110 mx-1">

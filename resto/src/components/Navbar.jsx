@@ -5,11 +5,15 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
 import { NavLink } from 'react-router-dom'
 import { useState, useEffect } from 'react'
+import { AuthContext } from '../contexts/AuthProvider'
 import Modal from './Modal'
 
 
 const Navbar = () => {
     const [isSticky, setIsSticky] = useState(false);
+    const {user} = React.useContext(AuthContext)
+    console.log(user)
+
     useEffect(() => {
         const handleScroll = () => {
             const scrollTop = window.scrollY;

@@ -128,8 +128,8 @@ function Recettes() {
         </div>
         {/* faisons afficher la liste de nos recettes */}
         <div className='grid grid-cols-2 media-grid-cols-3 lg-grid-cols-4 gap-4 mb-10'>
-          {currentRecettes.map((item) => (
-            <Cards key={item._id} item={item} />
+          {currentRecettes.map((item, index) => (
+            <Cards key={index} item={item} />
           ))}
         </div>
 
