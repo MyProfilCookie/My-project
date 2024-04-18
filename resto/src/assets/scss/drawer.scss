@@ -1,0 +1,66 @@
+/* Base styles for the drawer component */
+.drawer-toggle {
+  position: absolute;
+  opacity: 0; /* Hide checkbox visually */
+}
+
+.drawer-button {
+  display: inline-block; /* Make the label behave like a button */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+.drawer-button:hover {
+  transform: scale(1.1); /* Darker shade for hover effect */
+  right: 0;
+}
+
+.drawer-side {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 320px; /* Fixed width for the sidebar */
+  height: 100%; /* Full height */
+  background-color: #f0f0f07a; /* Light background for the sidebar */
+  transform: translateX(100%); /* Start hidden off screen */
+  transition: transform 0.3s ease; /* Smooth transition for sliding in/out */
+}
+
+#my-drawer-4:checked ~ .drawer-side {
+  transform: translateX(0); /* Move into view when checked */
+}
+
+.drawer-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  cursor: pointer; /* Pointer cursor to indicate clickable area */
+}
+
+.menu-drawer {
+  list-style: none; /* Remove default list styling */
+  padding: 16px; /* Padding inside the menu */
+  margin: 0; /* Remove default margin */
+}
+.menu-drawer :where(li:not(.menu-title)>*:not(ul,details,.menu-title,.btn)), .menu-drawer :where(li:not(.menu-title)>details>summary:not(.menu-title)) {
+    border-radius: .5rem;
+    background-color: $danger;
+    padding: .5rem 1rem;
+    text-align: start;
+}
+
+.menu-drawer li a {
+    margin: 1rem;
+  display: block; /* Make links fill the li */
+  padding: 8px; /* Padding for each link */
+  background-color: #ffffff; /* Background for links */
+  color: #333; /* Text color for links */
+  text-decoration: none; /* No underline */
+  border-radius: 4px; /* Rounded corners for links */
+}
+
+.menu-drawer li a:hover {
+  background-color: #e9ecef; /* Light grey background on hover */
+}

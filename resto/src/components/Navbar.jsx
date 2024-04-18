@@ -2,16 +2,17 @@
 import React from 'react'
 import logo from '/logo.svg'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars } from '@fortawesome/free-solid-svg-icons'
+import { faBars, faUser } from '@fortawesome/free-solid-svg-icons'
 import { NavLink } from 'react-router-dom'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useContext } from 'react'
 import { AuthContext } from '../contexts/AuthProvider'
 import Modal from './Modal'
+import Profile from './Profile'
 
 
 const Navbar = () => {
     const [isSticky, setIsSticky] = useState(false);
-    const {user} = React.useContext(AuthContext)
+    const { user } = useContext(AuthContext)
     console.log(user)
 
     useEffect(() => {
@@ -37,8 +38,10 @@ const Navbar = () => {
 
     ]
 
+
+
     return (
-        <header className="max-w-screen-2xl xl-px-2 fixed top-0 left-0 right-0 transition-all duration-300 ease-in-out z-10000 py-4">
+        <header className="fixed top-0 left-0 right-0 transition-all duration-300 ease-in-out z-10000 py-4">
 
             <div className={`navbar bg-base-100 ${isSticky ? 'shadow-md bg-base-100 transition-all duration-300' : ''}`}>
                 <div className="navbar-start">
@@ -77,7 +80,11 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <Modal />
+                    {
+                        user? <Profile user={user} /> :
+
+                        <Modal />
+                    }
                 </div>
             </div>
         </header>

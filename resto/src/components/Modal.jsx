@@ -1,11 +1,10 @@
-/* eslint-disable react/no-unescaped-entities */
+/* eslint-disable no-undef */
 /* eslint-disable no-unused-vars */
-import React, { useContext } from 'react'
-import { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUser } from '@fortawesome/free-solid-svg-icons'
 import { faGoogle, faInstagram, faFacebook, faTiktok } from '@fortawesome/free-brands-svg-icons'
-import { Link } from 'react-router-dom'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { useForm } from 'react-hook-form'
 import { AuthContext } from '../contexts/AuthProvider'
 
@@ -17,10 +16,45 @@ function Modal() {
     } = useForm()
 
     
-      const {signUpWithGoogle} = useContext(AuthContext)
+    
     const onSubmit = (data) => {
-        console.log(data)
-    }
+        const email = data.email
+        const password = data.password
+        // console.log(email, password)
+        login(email, password).then((result) => {
+            const user = result.user;
+            alert('Connexion effectuée avec succès!');
+            setIsModalOpen(false);
+            // on ferme la modal
+            navigate(from, { replace: true }); //  redirection vers la page d’accueil après connexion '/')
+        }
+    ).catch((error) => {
+        const errorMessage = error.message;
+        setErrorMessage("Email ou mot de passe incorrect")
+    })
+    
+}
+const handleLogin = () =>{
+    signUpWithGmail().then((result) => {
+        const user = result.user;
+        alert('Connexion avec Google effectuée avec succès!')
+        // on ferme la modal
+        setIsModalOpen(false);
+        navigate(from, { replace: true });
+    }).catch((error) => {
+        console.log(error)
+    });
+}
+const {signUpWithGmail, login} = useContext(AuthContext)
+const [errorMessage, setErrorMessage] = useState('')
+
+//  redirection vers la page d'accueil après connexion
+const location = useLocation()
+const navigation = useNavigate()
+//  redirection vers la page d'accueil après connexion
+const from = location.state?.from?.pathname || '/'
+
+
 
     const [isModalOpen, setIsModalOpen] = useState();
     const openModal = () => {
@@ -30,15 +64,9 @@ function Modal() {
     const closeModal = () => {
         setIsModalOpen(false);
     };
-    // google signin
-    const handleLogin=()=>{
-        signUpWithGoogle().then((result) => {
-            const user = result.user;
-            alert('login successful')
-        }).catch((error) => {
-            console.log(error)
-        });
-    }
+
+    // google connexion 
+   
 
     return (
         <div>
@@ -75,6 +103,12 @@ function Modal() {
                                             <a href="#" className="label-text-alt link link-hover ">Forgot password?</a>
                                         </label>
                                     </div>
+                                    {
+                                        errorMessage ?
+                                        <span className="error text-red font-bold">{errorMessage}</span> : ""
+                                    }   
+                                 
+
                                     <div className="form-control mt-6">
                                         <input type='submit' value='Login' className="btn btn-primary mx-auto" />
                                     </div>

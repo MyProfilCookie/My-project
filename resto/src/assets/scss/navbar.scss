@@ -106,6 +106,14 @@ div[role="button"] {
 // .menu-horizontal li:last-child {
 //   margin-right: 0;
 // }
+.bton-ghost {
+  background-color: #f3f4f6b2;
+  border-radius: 20px;
+  margin: 0 30px;
+  cursor: pointer;
+  color: #333;
+  text-decoration: none;
+}
 
 .btn-ghost {
   background-color: #f3f4f6b2;
@@ -134,6 +142,15 @@ img[alt="logo"]:hover {
   transition: scale 0.3s;
 
 }
+.bton-ghost:hover {
+  color: #333; /* hover:text-blue-500 */
+  scale: 1.1;
+  transition: scale 0.3s;
+}
+.bton-ghost .fa-bars {
+  display: none;
+}
+
 
 .btn-ghost:hover {
   background-color: #6365f15a;
