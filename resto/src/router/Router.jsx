@@ -3,6 +3,7 @@ import Main from "../layout/Main"
 import Home from "../pages/home/Home"
 import Recettes from "../pages/recette/Recettes"
 import Register from "../components/Register"
+import PrivateRouter from "../PrivateRouter/PrivateRouter"
 
 
 const router = createBrowserRouter([
@@ -16,7 +17,7 @@ const router = createBrowserRouter([
             },
             {
                 path: "/recettes",
-                element: <Recettes />
+                element: <PrivateRouter><Recettes /></PrivateRouter>
             },
             {
                 path: "/contact",

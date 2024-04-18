@@ -11,7 +11,7 @@ function Profile({ user }) {
                 <input id="my-drawer-4" type="checkbox" className="drawer-toggle" />
                 <div className="drawer-content">
                     {/* Page content here */}
-                    <label htmlFor="my-drawer-4" className="drawer-button bton-ghost btn-circle avatar ">
+                    <label htmlFor="my-drawer-4" className="drawer-button bton-ghost btn-circle avatar-profile ">
                     <div className="w-10 rounded-full">
                            {user.photoURL? <img src={user.photoURL} alt={user.displayName} /> : 
                         //    dans le cas où l'utilisateur n'a pas de photo de profil, on affiche une icône par défaut
