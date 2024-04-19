@@ -7,7 +7,7 @@ import { faUserAstronaut } from '@fortawesome/free-solid-svg-icons'
 function Profile({ user }) {
     return (
         <div>
-            <div className="drawer drawer-end z-100">
+            <div className="drawer drawer-end h-full z-100">
                 <input id="my-drawer-4" type="checkbox" className="drawer-toggle" />
                 <div className="drawer-content">
                     {/* Page content here */}
