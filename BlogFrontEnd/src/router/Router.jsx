@@ -4,6 +4,7 @@ import Home from "../pages/home/Home"
 import Recettes from "../pages/recette/Recettes"
 import Register from "../components/Register"
 import PrivateRouter from "../PrivateRouter/PrivateRouter"
+import UpdateProfile from "../pages/dashboard/UpdateProfile"
 
 
 const router = createBrowserRouter([
@@ -33,8 +34,8 @@ const router = createBrowserRouter([
             },
             
             {
-                path: "/dashboard",
-                element: <div>Dashboard</div>
+                path: "/update-profile",
+                element: <UpdateProfile />
             },
             {
                 path: "recettes/nouvelles",

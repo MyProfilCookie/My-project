@@ -50,7 +50,7 @@ const [errorMessage, setErrorMessage] = useState('')
 
 //  redirection vers la page d'accueil après connexion
 const location = useLocation()
-const navigation = useNavigate()
+const navigate = useNavigate()
 //  redirection vers la page d'accueil après connexion
 const from = location.state?.from?.pathname || '/'
 

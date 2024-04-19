@@ -90,6 +90,39 @@ h6 {
 .gap-20 {
   gap: 5rem;
 }
+.max-w-xs {
+  max-width: 20rem;
+}
+.max-w-sm {
+  max-width: 24rem;
+}
+.max-w-md {
+  max-width: 28rem;
+}
+.max-w-lg {
+  max-width: 32rem;
+}
+.max-w-xl {
+  max-width: 36rem;
+}
+.max-w-2xl {
+  max-width: 42rem;
+}
+.max-w-3xl {
+  max-width: 48rem;
+}
+.max-w-4xl {
+  max-width: 56rem;
+}
+.max-w-5xl {
+  max-width: 64rem;
+}
+.max-w-6xl {
+  max-width: 72rem;
+}
+.max-w-7xl {
+  max-width: 80rem;
+}
 
 .justify-between {
   justify-content: space-between;
@@ -313,7 +346,9 @@ h6 {
   border-radius: 1rem;
   width: 40%;
 }
-
+.min-h-screen {
+  min-height: 100vh;
+}
 .bg-red-200 {
   background-color: #ff4747;
 }
