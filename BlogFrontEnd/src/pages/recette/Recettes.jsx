@@ -15,7 +15,7 @@ function Recettes() {
     () => {
       const fetchData = async () => {
         try {
-          const response = await fetch('/recettes.json');
+          const response = await fetch('http://localhost:3000/recettes');
           const data = await response.json();
           (console.log(data))
           setRecettes(data);
