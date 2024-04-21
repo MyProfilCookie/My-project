@@ -1,4 +1,4 @@
-[
+const recettes = [
   {
     "id": 1,
     "titre": "Pain aux noix et aux figues",
@@ -1740,3 +1740,5 @@
     "image": "/images/chocolat.jpeg"
   }
 ]
+
+export default recettes;

@@ -5,6 +5,7 @@ import Recettes from "../pages/recette/Recettes"
 import Register from "../components/Register"
 import PrivateRouter from "../PrivateRouter/PrivateRouter"
 import UpdateProfile from "../pages/dashboard/UpdateProfile"
+import RecetteDetail from "../pages/recette/RecetteDetail"
 
 
 const router = createBrowserRouter([
@@ -29,7 +30,7 @@ const router = createBrowserRouter([
                 element: <div>About 📧</div>
             },
             {
-                path: "*",
+                path: "/*",
                 element: <div>404</div>
             },
             
@@ -38,16 +39,20 @@ const router = createBrowserRouter([
                 element: <UpdateProfile />
             },
             {
-                path: "recettes/nouvelles",
+                path: "/recettes/nouvelles",
                 element: <div>Nouvelle</div>
             },
             {
-                path: "recettes/populaires",
+                path: "/recettes/populaires",
                 element: <div>Populaire</div>
             },
             {
-                path: "recettes/best",
+                path: "/recettes/best",
                 element: <div>Best</div>
+            },
+            {
+                path: "/recettes/:id",
+                element: <RecetteDetail />
             }
         ]
     },

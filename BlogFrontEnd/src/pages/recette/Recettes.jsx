@@ -130,6 +130,7 @@ function Recettes() {
         <div className='grid grid-cols-2 media-grid-cols-3 lg-grid-cols-4 gap-4 mb-10'>
           {currentRecettes.map((item, index) => (
             <Cards key={index} item={item} />
+            
           ))}
         </div>
 
