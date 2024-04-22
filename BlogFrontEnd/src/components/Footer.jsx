@@ -10,7 +10,7 @@ function Footer() {
     return (
         <div>
             <footer className="shadow-footer items-center">
-                <aside className="footer grid-cols-3 bg-belge text-base-content p-10  items-center">
+                <aside className="footer grid-cols media-grid-cols-3 bg-belge text-base-content p-10  items-center mx-auto">
                     <nav>
                         <h6 className="subtitle mt-2"><Link to="/login"><FontAwesomeIcon icon={faUser} /> Mon profil</Link></h6>
                         <a className="link link-hover">Recette favories</a>

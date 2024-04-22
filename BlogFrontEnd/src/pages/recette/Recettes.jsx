@@ -80,7 +80,7 @@ function Recettes() {
   return (
     <div>
 
-      <div className='container mx-auto px-4 xl-px-24 max-w-screen-2xl b-gradient-to-b'>
+      <div className='container mx-auto px-4 xl-px-24 max-w-screen-2xl'>
 
         <div className='py-36 flex flex-col items-center justify-center gap-8'>
 

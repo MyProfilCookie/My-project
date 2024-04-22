@@ -7,6 +7,11 @@
   row-gap: 2.5rem;
   font-size: 0.875rem;
   line-height: 1.25rem;
+  & nav {
+    @media (max-width: 768px) {
+        width: 100%;
+    }
+  }
   
 }
 .footer > * {
@@ -29,7 +34,7 @@
   }
 }
 .shadow-footer {
-    box-shadow: 14px -16px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+  box-shadow: -18px 10px 20px 7px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
 }
 
 .text-base-300 {

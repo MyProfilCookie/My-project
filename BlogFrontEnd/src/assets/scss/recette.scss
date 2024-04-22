@@ -1,0 +1,75 @@
+.recette-detail {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px;
+    // background: #e8ccc775;
+    border-radius: 10px;
+
+  .header {
+    margin-top: 8rem;
+    margin-bottom: 2rem;
+    grid-column: 1 / -1; // Le titre prend toute la largeur
+    text-align: center;
+    h1 {
+      font-size: 2.8rem;
+      color: #333;
+      margin-bottom: 20px;
+    }
+  }
+
+  .left-column,
+  .right-column {
+    display: flex;
+    flex-direction: column;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  }
+
+  .details,
+  .ingredients,
+  .instructions {
+    margin-bottom: 2rem;
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    h2,
+    h3 {
+      color: #007bff;
+      margin-bottom: 10px;
+    }
+    ul,
+    ol {
+      list-style-type: none;
+      padding: 0;
+      li {
+        background: white;
+        padding: 10px;
+        border-radius: 5px;
+        margin-bottom: 8px;
+      }
+    }
+  }
+
+  // Media query pour les appareils mobiles
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr; // Une seule colonne pour les petits écrans
+    .left-column,
+    .right-column {
+      order: 0;
+    }
+    .header,
+    .left-column,
+    .right-column {
+      grid-column: 1 / -1; // Tous les éléments s'étendent sur toute la colonne
+    }
+  }
+}

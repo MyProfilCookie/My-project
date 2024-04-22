@@ -1,0 +1,37 @@
+// Classes pour les dégradés spécifiques
+.bg-creme-anglaise { @include gradient-creme-anglaise; }
+.bg-berry-delight { @include gradient-berry-delight; }
+.bg-macaron-lavender { @include gradient-macaron-lavender; }
+.bg-pistachio-lemon { @include gradient-pistachio-lemon; }
+.bg-coffee-delight { @include gradient-coffee-delight; }
+.bg-toasted-almond { @include gradient-toasted-almond; }
+.bg-mint-choco-chip { @include gradient-mint-choco-chip; }
+.bg-sunset-cake { @include gradient-sunset-cake; }
+.bg-strawberry-cream { @include gradient-strawberry-cream; }
+.bg-chocolate-raspberry { @include gradient-chocolate-raspberry; }
+.bg-nut-cookie { @include gradient-nut-cookie; }
+.bg-chocolate-fondant { @include gradient-chocolate-fondant; }
+.bg-gingerbread { @include gradient-gingerbread; }
+.bg-blueberry-pie { @include gradient-blueberry-pie; }
+.bg-chocolate-caramel { @include gradient-chocolate-caramel; }
+.bg-mocha-vanilla { @include gradient-mocha-vanilla; }
+.bg-creme-brulee { @include gradient-creme-brulee; }
+.bg-espresso-dark { @include gradient-espresso-dark; }
+
+// Classes pour les dégradés colorés
+.bg-tropical { @include gradient-tropical; }
+.bg-northern-lights { @include gradient-northern-lights; }
+.bg-sunset { @include gradient-sunset; }
+.bg-spring { @include gradient-spring; }
+.bg-rainbow { @include gradient-rainbow; }
+.bg-deep-ocean { @include gradient-deep-ocean; }
+.bg-fruit-cocktail { @include gradient-fruit-cocktail; }
+.bg-lemon-lime { @include gradient-lemon-lime; }
+.bg-funfair { @include gradient-funfair; }
+
+// Classes pour les dégradés du clair au sombre
+.bg-light-to-dark-1 { @include gradient-light-to-dark-1; }
+.bg-light-to-dark-2 { @include gradient-light-to-dark-2; }
+.bg-light-to-dark-3 { @include gradient-light-to-dark-3; }
+.bg-light-to-dark-4 { @include gradient-light-to-dark-4; }
+.bg-light-to-dark-5 { @include gradient-light-to-dark-5; }

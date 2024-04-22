@@ -56,10 +56,11 @@ const Navbar = () => {
 
                         </ul>
                     </div>
-                    <a href='/'>
-                        <img src={logo} alt="logo" width={100} />
-                    </a>
                 </div>
+                    <a href='/'>
+                        <img src={logo} alt="logo" style={{ width: '60px' }} className='navbar-start' />
+                    </a>
+
                 <div className="navbar-center hidden lg:flex px-4">
                     <ul className="menu menu-horizontal px-1 ">
                         {navItems.map(item => (
@@ -81,9 +82,9 @@ const Navbar = () => {
                 </div>
                 <div className="navbar-end">
                     {
-                        user? <Profile user={user} /> :
+                        user ? <Profile user={user} /> :
 
-                        <Modal />
+                            <Modal />
                     }
                 </div>
             </div>

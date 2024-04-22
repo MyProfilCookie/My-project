@@ -1,0 +1,273 @@
+// Mixin pour appliquer des dégradés linéaires
+@mixin linear-background($colors, $direction: 135deg) {
+  background: linear-gradient($direction, $colors);
+}
+@mixin linear-gradient($colors, $direction: to right) {
+  background: linear-gradient-right($direction, $colors);
+}
+
+// Définition des mixins pour chaque dégradé spécifique
+@mixin gradient-creme-anglaise {
+  @include linear-gradient((#fff1e6, #f0c27b));
+}
+
+@mixin gradient-berry-delight {
+  @include linear-gradient((#8e0e00, #1f1c18, #8e0e00, #1f1c18));
+}
+
+@mixin gradient-macaron-lavender {
+  @include linear-gradient((#957dad, #d291bc));
+}
+
+@mixin gradient-pistachio-lemon {
+  @include linear-gradient((#c0fc8a, #dad299, #f6f0c4));
+}
+
+@mixin gradient-coffee-delight {
+  @include linear-gradient((#4b3832, #854442, #fff4e0));
+}
+
+@mixin gradient-toasted-almond {
+  @include linear-gradient((#826c34, #f3d6ad, #826c34));
+}
+
+@mixin gradient-mint-choco-chip {
+  @include linear-gradient((#003000, #607848, #a9ba9d));
+}
+
+@mixin gradient-sunset-cake {
+  @include linear-gradient((#f09819, #edde5d, #f0f2f0));
+}
+
+@mixin gradient-strawberry-cream {
+  @include linear-gradient((#f85f73, #ffe985));
+}
+
+@mixin gradient-chocolate-raspberry {
+  @include linear-gradient((#360000, #290001, #4b0101, #590101, #700c1c));
+}
+
+// Mixins spécifiques pour chaque dégradé
+@mixin gradient-nut-cookie {
+  @include linear-gradient((#4e342e, #8d6e63, #d7ccc8));
+}
+
+@mixin gradient-chocolate-fondant {
+  @include linear-gradient((#1d1308, #341a04, #5a2a02));
+}
+
+@mixin gradient-gingerbread {
+  @include linear-gradient((#3c2f2f, #5d4037, #795548));
+}
+
+@mixin gradient-blueberry-pie {
+  @include linear-gradient((#201a23, #4b2b31, #6c3c4e));
+}
+
+@mixin gradient-chocolate-caramel {
+  @include linear-gradient((#3e1f0d, #593e2a, #74552e));
+}
+
+@mixin gradient-mocha-vanilla {
+  @include linear-gradient((#403b38, #5e524c, #796655));
+}
+
+@mixin gradient-creme-brulee {
+  @include linear-gradient((#564138, #6e5847, #846e58));
+}
+
+@mixin gradient-espresso-dark {
+  @include linear-gradient((#2c221f, #3a2c28, #453735));
+}
+
+// Définition des mixins pour chaque dégradé coloré
+@mixin gradient-tropical {
+  @include linear-gradient((#009485, #fcee21, #ff7260));
+}
+
+@mixin gradient-northern-lights {
+  @include linear-gradient((#8a2387, #e94057, #f27121));
+}
+
+@mixin gradient-sunset {
+  @include linear-gradient((#0b486b, #f56217, #f1e767));
+}
+
+@mixin gradient-spring {
+  @include linear-gradient((#ffecd2, #fcb69f, #d991ba));
+}
+
+@mixin gradient-rainbow {
+  @include linear-gradient((#e0234e, #d73b3e, #f7d358, #77ab59, #23b5d3));
+}
+
+@mixin gradient-deep-ocean {
+  @include linear-gradient((#2c3e50, #4ca1af));
+}
+
+@mixin gradient-fruit-cocktail {
+  @include linear-gradient((#56ab2f, #a8e063));
+}
+
+@mixin gradient-lemon-lime {
+  @include linear-gradient((#3ca55c, #b5ac49));
+}
+
+@mixin gradient-funfair {
+  @include linear-gradient((#a770ef, #cf8bf3, #fdb99b));
+}
+
+
+@mixin gradient-light-to-dark-1 {
+  @include linear-gradient((#e8e8e8, #c8c8c8, #a8a8a8, #888888, #686868));
+}
+
+@mixin gradient-light-to-dark-2 {
+  @include linear-gradient((#f0f0f0, #d0d0d0, #b0b0b0, #909090, #707070));
+}
+
+@mixin gradient-light-to-dark-3 {
+  @include linear-gradient((#fafafa, #dadada, #bababa, #9a9a9a, #7a7a7a));
+}
+
+@mixin gradient-light-to-dark-4 {
+  @include linear-gradient((#fff0f0, #ddb0b0, #bb7070, #995050, #773030));
+}
+
+@mixin gradient-light-to-dark-5 {
+  @include linear-gradient((#f0fff0, #b0ddb0, #70bb70, #509950, #307730));
+}
+.bg-tarte-fruits {
+    @include linear-background(
+      (
+        rgba(255, 175, 189, 0.6) 10%,
+        rgba(255, 195, 160, 0.8) 40%,
+        rgba(255, 215, 0, 0.6) 100%
+      )
+    );
+  }
+  
+  .bg-macaron {
+    @include linear-background(
+      (
+        rgba(233, 222, 250, 0.8) 0%,
+        rgba(165, 221, 202, 0.9) 50%,
+        rgba(255, 250, 220, 0.8) 100%
+      )
+    );
+  }
+  
+  .bg-chocolat-gourmet {
+    @include linear-background(
+      (
+        rgba(38, 12, 12, 0.9) 0%,
+        rgba(74, 20, 20, 0.75) 50%,
+        rgba(112, 25, 25, 0.7) 100%
+      )
+    );
+  }
+  
+  .bg-sorbet-citron {
+    @include linear-background(
+      (
+        rgba(255, 250, 204, 0.8) 0%,
+        rgba(199, 233, 192, 0.8) 50%,
+        rgba(161, 220, 242, 0.6) 100%
+      )
+    );
+  }
+  
+  .bg-tiramisu {
+    @include linear-background(
+      (
+        rgba(101, 67, 33, 0.9) 0%,
+        rgba(142, 95, 60, 0.85) 50%,
+        rgba(219, 186, 140, 0.7) 100%
+      )
+    );
+  }
+  
+  .bg-coucher-soleil-gourmand {
+    @include linear-background(
+      (
+        rgba(242, 153, 74, 0.8) 0%,
+        rgba(242, 201, 76, 0.9) 50%,
+        rgba(217, 128, 250, 0.8) 100%
+      )
+    );
+  }
+  
+  .bg-mocha {
+    @include linear-background(
+      (
+        rgba(51, 0, 0, 0.95) 0%,
+        rgba(102, 51, 0, 0.85) 50%,
+        rgba(179, 136, 103, 0.6) 100%
+      )
+    );
+  }
+  
+  .bg-caramel {
+    @include linear-background(
+      (
+        rgba(153, 51, 0, 0.95) 0%,
+        rgba(204, 102, 0, 0.85) 50%,
+        rgba(255, 204, 0, 0.6) 100%
+      )
+    );
+  }
+  
+  .bg-truffe {
+    @include linear-background(
+      (
+        rgba(28, 20, 13, 0.9) 0%,
+        rgba(75, 54, 33, 0.85) 50%,
+        rgba(149, 105, 73, 0.7) 100%
+      )
+    );
+  }
+  
+  .bg-chocolat-or {
+    @include linear-background(
+      (
+        rgba(55, 29, 9, 0.8) 0%,
+        rgba(117, 78, 40, 0.85) 50%,
+        rgba(245, 222, 179, 0.6) 100%
+      )
+    );
+  }
+  
+  .bg-chocolat-noir {
+    @include linear-background(
+      (
+        rgba(0, 0, 0, 0.9) 0%,
+        rgba(51, 51, 51, 0.85) 50%,
+        rgba(102, 102, 102, 0.7) 100%
+      )
+    );
+  }
+  
+  .bg-chocolat-blanc {
+    @include linear-background(
+      (
+        rgba(241, 241, 241, 0.9) 0%,
+        rgba(223, 193, 153, 0.85) 50%,
+        rgba(204, 176, 132, 0.7) 100%
+      )
+    );
+  }
+  
+  .bg-noir-classe {
+    @include linear-background(
+      (
+        rgba(38, 38, 38, 1) 0%,
+        rgba(28, 28, 28, 0.9) 50%,
+        rgba(18, 18, 18, 1) 100%
+      ),
+      360deg
+    );
+  }
+  
+  .bg-noir {
+    background-color: rgba(18, 18, 18, 1);
+  }

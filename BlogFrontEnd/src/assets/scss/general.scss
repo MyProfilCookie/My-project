@@ -3,10 +3,17 @@
 body {
   font-family: "Inter", sans-serif;
 }
+* {
+  box-sizing: border-box;
+}
 .max-w-screen-2xl {
   max-width: 1536px;
 }
-
+html, body 
+{ 
+ height: 100%;
+ overflow-x: hidden;
+}
 h1,
 h2,
 h3,
@@ -224,7 +231,38 @@ h6 {
   background-color: #ff4747;
 }
 .bg-beige {
-  background-color: rgb(255, 247, 241);
+  background-color: #F1E7E1;
+}
+.bg-chocolate {
+  background: linear-gradient(135deg, #4A2C2A 0%, #795C4F 25%, #D1AC00 50%, #EADAB8 75%, #FFF4E6 100%);
+
+}
+.bg-chocolate2 {
+  background: linear-gradient(360deg, 
+  #3e2723 0%,      /* Chocolat très foncé */
+  #5D4037 50%,     /* Chocolat marron moyen */
+  #A1887F 100%);
+}
+.bg-fruit {
+  background: linear-gradient(135deg, #E53935 0%, #FFBA80 25%, #8CD790 50%, #5C6BC0 75%, #FFF176 100%);
+
+}
+.bg-gourmand {
+  background: linear-gradient(135deg, #FADADD 0%, #EADAB8 100%);
+
+
+}
+.bg-creme {
+  background: linear-gradient(135deg, #FFF4E6 0%, #FFECDA 100%);
+
+}
+.bg-macaron {
+  background: linear-gradient(135deg, 
+  #F49AC2 0%,       
+  #A7D676 25%,     
+  #9999CC 50%, 
+  #FDEAA8 75%,
+  #9A8194 100%); 
 }
 .bg-belge-dark {
   background-color: rgb(255, 228, 201);

@@ -106,7 +106,8 @@
   top: 0;
   right: 0;
   height: 100%;
-  background-color: #f3f4f6; // bg-base-200 in Tailwind
+  background: linear-gradient(135deg, #FADADD 0%, #EADAB8 100%);
+ // bg-base-200 in Tailwind
   color: #1f2937; // text-base-content in Tailwind
   transform: translateX(100%);
   transition: transform 0.3s ease;
@@ -123,9 +124,10 @@
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: #f3f4f600;
+  background: linear-gradient(135deg, #FADADD 0%, #EADAB8 100%);
+  ;
   cursor: pointer;
-  opacity: 0;
+  opacity: 1;
   visibility: hidden;
   transition: opacity 0.3s ease, visibility 0s linear 0.3s;
 }

@@ -9,6 +9,7 @@ import Cards from '../../components/Cards';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronLeft } from '@fortawesome/free-solid-svg-icons'
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons'
+import recettes from '../../../public/recettes';
 
 
 function SpecialRecette() {
@@ -19,7 +20,7 @@ function SpecialRecette() {
 
   useEffect(
     () => {
-      fetch('/recettes.json')
+      fetch('http://localhost:3000/recettes')
         .then((response) => response.json())
         .then((data) => {
           const specialsCategory = data.filter((recette) => recette.category === 'Pains et viennoiserie');
