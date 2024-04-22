@@ -66,7 +66,6 @@ const recetteSchema = new Schema(
     image: {
       type: String,
       trim: true,
-      required: true,
     },
   },
   {

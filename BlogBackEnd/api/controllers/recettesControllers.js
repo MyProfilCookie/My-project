@@ -13,6 +13,7 @@ const getRecetteById = async(req, res) => {
     try {
         const recette = await Recette.findById(req.params.id);
         res.json(recette);
+        console.log(recette);
     } catch (err) {
         res.status(500).json({ message: err.message });
     }
@@ -34,6 +35,7 @@ const createRecette = async(req, res) => {
     try {
         const newRecette = await recette.save();
         res.status(201).json(newRecette);
+        console.log(newRecette);
     } catch (err) {
         res.status(400).json({ message: err.message });
     }
@@ -55,6 +57,7 @@ const updateRecette = async(req, res) => {
     try {
         const updatedRecette = await Recette.findByIdAndUpdate(req.params.id, recette, { new: true });
         res.json(updatedRecette);
+        console.log(updatedRecette);
     } catch (err) {
         res.status(400).json({ message: err.message });
     }
