@@ -1,0 +1,69 @@
+// Base de styles pour le panneau admin
+.admin-panel {
+    margin: 100px auto;
+  font-family: "Arial", sans-serif;
+  padding: 20px;
+  background-color: #f4f4f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+  & h1 {
+    color: #333;
+    text-align: center;
+  }
+  h2 {
+    color: #555;
+    margin-top: 20px;
+  }
+  // Styles pour les sections de gestion
+  .section {
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-top: 20px;
+    border-radius: 5px;
+  }
+  h3 {
+    color: #444;
+  }
+  // Stylisation spécifique pour les listes d'éléments
+  .item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    padding: 5px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  p {
+    margin: 0;
+  }
+  // Styles pour les boutons d'action
+  .button-panel {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+  &.delete {
+    background-color: #e74c3c;
+    color: white;
+  }
+  &.edit {
+    background-color: #3498db;
+    color: white;
+  }
+  &.update {
+    background-color: #f39c12;
+    color: white;
+  }
+  &.promote {
+    background-color: #2ecc71;
+    color: white;
+  }
+  &:hover {
+    opacity: 0.8;
+  }
+}

@@ -5,7 +5,7 @@ const { getAllUsers, getUserById,updateUser, deleteUser, getMe, loginUser, addUs
 // get toutes les utilisateurs
 router.get("/", getAllUsers);
 router.get("/:id", getUserById);
-router.put("/:id/update", updateUser);
+router.put("/:id", updateUser);
 router.delete("/:id/delete", deleteUser);
 router.get("/me", getMe);
 router.post("/login", loginUser);

@@ -105,35 +105,31 @@ const updateUser = async (req, res, next) => {
   const { id } = req.params;
   try {
     if (!mongoose.Types.ObjectId.isValid(id)) {
-      next(createError(400, "ID n'existe pas"));
+      return next(createError(400, "ID n'existe pas"));
     }
 
-    const isUserExists = await User.findOne({ _id: id });
-    if (!isUserExists) {
-      next(createError(400, "User n'existe pas"));
-    }
-    const user = {
-      username: req.body.username,
-      email: req.body.email,
-      password: req.body.password,
-    }
+    const userUpdates = {
+      username: data.username,
+      email: data.email,
+      password: data.password,
+      role: data.role  // Assurez-vous d'ajouter ceci pour mettre à jour le rôle
+    };
 
-    const updateUser = await User.findByIdAndUpdate(id, user, {
-      new: true,
+    const updatedUser = await User.findByIdAndUpdate(id, userUpdates, {
+      new: true
     });
 
-    if(updateUser) {
+    if (updatedUser) {
       res.status(200).json({
         status: true,
-        message: "Utilisateur mis à jour avec succes",
-        result: updateUser,
+        message: "Utilisateur mis à jour avec succès",
+        result: updatedUser
       });
-      console.log(updateUser);
     } else {
       res.status(200).json({
         status: false,
-        message: "No changes were made",
-        result: null,
+        message: "Aucun changement n'a été effectué",
+        result: null
       });
     }
   } catch (error) {

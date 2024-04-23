@@ -7,7 +7,7 @@ import { useForm } from "react-hook-form"
 import { AuthContext } from '../../contexts/AuthProvider'
 
 function UpdateProfile() {
-    const { updateUserProfile } = useContext(AuthContext)
+    const { updateUserProfile, user } = useContext(AuthContext)
     const location = useLocation()
     const navigate = useNavigate()
     //  redirection vers la page d'accueil après connexion
@@ -42,9 +42,20 @@ function UpdateProfile() {
                 <div className="card hero-content flex-col shrink-0 w-full max-w-sm shadow-2xl bg-base-100 ">
                     <form className="card-body rounded-2xl " onSubmit={handleSubmit(onSubmit)}>
                         <h3 className="text-3xl text-center font-bold mb-8">Mise à jour de ton profil</h3>
+                        <div className="form-control">
+                        <label className="label">
+                            <span className="label-text">Ton ancien email</span>
+                        </label>
+                        <input 
+                            type="text" 
+                            placeholder="Ton email actuel" 
+                            className="input input-bordered" 
+                            defaultValue={user?.email} 
+                            readOnly />
+                    </div>
                         <div className="form-control max-w-sm">
                             <label className="label">
-                                <span className="label-text">Ton pseudo</span>
+                                <span className="label-text">Ta nouvelle adresse mail</span>
                             </label>
                             <input {...register("name")} type="text" placeholder="ton nouveau pseudo" className="input input-bordered" required />
                         </div>

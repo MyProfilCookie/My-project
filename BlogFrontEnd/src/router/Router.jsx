@@ -6,6 +6,7 @@ import Register from "../components/Register"
 import PrivateRouter from "../PrivateRouter/PrivateRouter"
 import UpdateProfile from "../pages/dashboard/UpdateProfile"
 import RecetteDetail from "../pages/recette/RecetteDetail"
+import AdminPanel from "../pages/dashboard/AdminPanel"
 
 
 const router = createBrowserRouter([
@@ -20,6 +21,11 @@ const router = createBrowserRouter([
             {
                 path: "/recettes",
                 element: <PrivateRouter><Recettes /></PrivateRouter>
+            },
+            {
+                path: "/admin-panel",
+                element: <PrivateRouter><AdminPanel /></PrivateRouter>
+
             },
             {
                 path: "/contact",
