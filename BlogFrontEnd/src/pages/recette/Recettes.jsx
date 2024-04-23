@@ -87,7 +87,6 @@ function Recettes() {
           <div className='text-center space-y-7 px-4'>
             <h2 className='media-text-5xl text-4xl font-bold media-leading-snug leading-snug'> La pâtisserie <span className='text-red'>gourmande</span> <span className='text-red'>elit</span>.</h2>
             <p className='text-xl text-gray text-xl media-w-4-5 mx-auto'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <button className=' btn-primary px-8 py-3 font-semibold rounded-full'>Voir plus</button>
 
           </div>
 
@@ -97,10 +96,10 @@ function Recettes() {
 
       <div className="section-container align-center mx-auto">
         {/* bouton de recherche */}
-        <div>Bouton de recherche</div>
+        <div className='text-center mb-10'>Bouton de recherche</div>
         <div className='flex flex-wrap media-justify-between items-center flew-row mx-auto'>
 
-          <div className='flex media-mb-10 media-mt-10 gap-4 flex-wrap'>
+          <div className='flex mb-10 media-mb-10 media-mt-10 gap-4 flex-wrap'>
 
             <button onClick={showAll} className={search === 'toutes' ? 'button active' : 'btn'}>toutes</button>
             <button onClick={() => filterRecettes('Pains et viennoiserie')} className={search === 'Pains et viennoiserie' ? 'button active' : 'btn'}>Pains et viennoiserie</button>
@@ -112,7 +111,7 @@ function Recettes() {
 
           </div>
           {/* afficher le nombre de recettes disponibles par categorie dans la barre de recherche */}
-          <div className='media-mb-10 media-mt-10 flex'>
+          <div className='mb-10  media-mb-10 media-mt-10 flex'>
             <select className="form-select form-select-lg btn"
               name="sort" id="sort"
               onChange={(e) => showCategory(e.target.value)}

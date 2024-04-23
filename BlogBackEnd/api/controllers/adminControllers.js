@@ -45,10 +45,12 @@ const getAllInformations = async (req, res, next) => {
             const admin = users.filter(user => user.role === "admin");
     
             res.json({
-                users: users.length,
-                admin: admin.length,
+                users: users, user: users.length, // Nombre d'utilisateurs enregistrés ce mois
+                admin: admin, admin: admin.length, // Nombre d'utilisateurs admin
                 nonAdminUsers: users.length - admin.length, // Nombre d'utilisateurs non-admin
+
             });
+            console.log(users)
         } catch (error) {
             next(createError(500, error.message));
         }

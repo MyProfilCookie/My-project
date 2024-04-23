@@ -4,17 +4,17 @@
   flex-direction: column;
   border-radius: var(--rounded-box, 1rem);
 }
-.card-compact .card-body {
+.card-compact .card-body-cards {
   padding: 1rem;
   font-size: 0.875rem;
   line-height: 1.25rem;
 }
 
-.card-body {
+.card-body-cards {
   display: flex;
   flex: 1 1 auto;
   flex-direction: column;
-  // padding: var(--padding-card, 2rem);
+  text-align: center;
 }
 .bton-primary {
   background-color: #ff4747;
@@ -44,7 +44,7 @@
   display: flex;
   flex-wrap: wrap;
   // align-items: flex-start;
-  gap: 0.5rem;
+  gap: 4rem;
 }
 .bton {
   display: inline-flex;
