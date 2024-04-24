@@ -55,3 +55,8 @@
         width: 100%;
     }
 }
+.media-w-64 {
+    @media (min-width: 768px) {
+        width: 16rem;
+    }
+}

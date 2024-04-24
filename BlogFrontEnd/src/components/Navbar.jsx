@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React from 'react'
-import logo from '/logo.svg'
+import logo from '/logo2.svg'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faUser } from '@fortawesome/free-solid-svg-icons'
 import { NavLink } from 'react-router-dom'
@@ -34,7 +34,8 @@ const Navbar = () => {
         // faire un menu detail pour la navbar
         { id: 2, name: 'Contact', link: '/contact' },
         { id: 3, name: 'About', link: '/about' },
-        { id: 4, name: 'Recettes', link: '/recettes' },
+        
+        
 
     ]
 
@@ -45,14 +46,14 @@ const Navbar = () => {
 
             <div className={`navbar bg-base-100 ${isSticky ? 'shadow-md bg-base-100 transition-all duration-300' : ''}`}>
                 <a href='/'>
-                    <img src={logo} alt="logo" style={{ width: '60px' }} className='logo-react text-white'/>
+                    <img src={logo} alt="logo" style={{ width: '60px' }} className='logo-react'/>
                 </a>
                 <div className="navbar-start">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
-                            <FontAwesomeIcon icon={faBars} size="2xl" />
+                            <FontAwesomeIcon icon={faBars} size="2xl" style={{color: '#fff'}} />
                         </div>
-                        <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
+                        <ul tabIndex={0} className="menu-nav menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
                             {navItems.map(item => (
                                 <li className="py-1 mt-3 mb-3" key={item.id}><NavLink to={item.link}>{item.name}</NavLink></li>
                             ))}

@@ -78,9 +78,14 @@
   padding: 0;
 }
 .card-body {
+  & h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+  }
   .form-control {
+    color: #333;
     margin-bottom: 1.5rem;
-
     .label {
       display: block;
       font-weight: bold;
