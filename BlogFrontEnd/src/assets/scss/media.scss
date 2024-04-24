@@ -60,3 +60,8 @@
         width: 16rem;
     }
 }
+.media-w-4-5 {
+    @media (min-width: 768px) {
+        width: 80%;
+    }
+}

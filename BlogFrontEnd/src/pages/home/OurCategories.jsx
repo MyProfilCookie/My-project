@@ -26,7 +26,7 @@ function OurCategories() {
         <div className='section-container my-16'>
             <div className='flex md-flex-col-reverse justify-between items-center gap-20 md-gap-0'>
                 <div className='md-w-half px-8 sd-w-full'>
-                    <div className='text-left md-w-4-5'>
+                    <div className='text-left media-w-4-5'>
                         <p className='subtitle text-red'>Rejoingez nous pour devenir aussi des petits chefs <Link className='text-primary' to='/recette'> <FontAwesomeIcon icon={faKitchenSet} className='hover-scale-110 transition duration-300 text-red' /></Link></p>
                         <p className='title'>Découvrez la recette préférée de nos chefs</p>
                         <p className='my-5 text-secondary text-lg leading-30  '>
@@ -40,7 +40,7 @@ function OurCategories() {
                         {
                             categorieLists.map((item, index) => {
                                 return (
-                                    <div key={index} className='shadow-lg p-6 rounded-2xl flex gap-4 px-4 py-5 text-center space-y-2 cursor-pointer hover-scale-110 duration-400 transition-all'>
+                                    <div key={index} className='shadow-lg p-6 rounded-2xl flex gap-4 px-4 py-5 text-center space-y-2 cursor-pointer hover-scale-110 duration-400 transition-all bg-strawberry-cream'>
                                         <div className='w-20 mx-auto '>
                                             {item.image}
                                         </div>

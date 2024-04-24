@@ -256,6 +256,15 @@
       )
     );
   }
+  .bg-chocolat-blanc2 {
+    @include linear-background(
+      (
+         rgba(241, 241, 241, 0.9) 0%, 
+         rgba(223, 193, 153, 0.85) 50%, 
+         rgb(204 176 132 / 12%) 100%
+      )
+    );
+  }
   
   .bg-noir-classe {
     @include linear-background(

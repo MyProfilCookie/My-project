@@ -17,6 +17,12 @@ function Recettes() {
         try {
           const response = await fetch('http://localhost:3000/recettes');
           const data = await response.json();
+          const normalizedData = data.map(item => ({
+            ...item,
+            title: item.title || '' // Assurez-vous que title n'est jamais undefined
+          }));
+          setRecettes(normalizedData);
+          setFilteredRecettes(normalizedData);
           (console.log(data))
           setRecettes(data);
           setFilteredRecettes(data);
@@ -69,6 +75,19 @@ function Recettes() {
   const currentRecettes = filteredRecettes.slice(indexOfFirstRecette, indexOfLastRecette);
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
+  const handleSearchChange = (event) => {
+    setSearch(event.target.value);
+  };
+
+  const handleSearchClick = () => {
+    const filtered = search.trim() === ''
+      ? recettes
+      : recettes.filter(recette =>
+        recette.title?.toLowerCase().includes(search.trim().toLowerCase())
+      );
+    console.log("Filtered Results:", filtered); // Affiche les résultats filtrés pour débogage
+    setFilteredRecettes(filtered);
+  };
 
 
 
@@ -97,6 +116,27 @@ function Recettes() {
       <div className="section-container align-center mx-auto">
         {/* bouton de recherche */}
         <div className='text-center mb-10'>Bouton de recherche</div>
+        <div className='container'>
+          <div className='search-bar'>
+            <input
+              type="text"
+              placeholder="Rechercher une recette"
+              value={search}
+              onChange={handleSearchChange}
+              className="form-control"
+            />
+            <button onClick={handleSearchClick} className="btn btn-primary">Rechercher</button>
+          </div>
+          <div>
+            {filteredRecettes.length > 0 ? (
+              <p className="search-results-count">
+                {filteredRecettes.length} recette{filteredRecettes.length > 1 ? 's' : ''} trouvée{filteredRecettes.length > 1 ? 's' : ''}
+              </p>
+            ) : (
+              <p className="search-results-count">Aucune recette trouvée</p>
+            )}
+          </div>
+        </div>
         <div className='flex flex-wrap media-justify-between items-center flew-row mx-auto'>
 
           <div className='flex mb-10 media-mb-10 media-mt-10 gap-4 flex-wrap'>
@@ -129,21 +169,21 @@ function Recettes() {
         <div className='grid grid-cols-2 media-grid-cols-3 lg-grid-cols-4 gap-4 mb-10'>
           {currentRecettes.map((item, index) => (
             <Cards key={index} item={item} />
-            
+
           ))}
         </div>
 
       </div>
       <div className='flex justify-center mb-10 gap-4'>
-          {
-            Array.from({ length: Math.ceil(filteredRecettes.length / itemsPerPage)}).map((_, index ) => (
-              <button key={index + 1} 
-              onClick={() => paginate(index + 1)} 
+        {
+          Array.from({ length: Math.ceil(filteredRecettes.length / itemsPerPage) }).map((_, index) => (
+            <button key={index + 1}
+              onClick={() => paginate(index + 1)}
               className={`mx-1 px-2 py-1 rounded-full ${currentPage === index + 1 ? 'btn-primary' : 'btn'}`}>
-                {index + 1}
-              </button>
-            ))
-          }
+              {index + 1}
+            </button>
+          ))
+        }
       </div>
 
 

@@ -14,7 +14,7 @@ function SectionRecette() {
                     <img src='./images/section2.jpeg' alt="banner" className='cover rounded-2xl shadow-lg w-150 md-w-full ' />
                 </div>
                 <div className='md-w-half px-4 sd-w-full'>
-                    <div className='text-left md-w-4-5'>
+                    <div className='text-left media-w-4-5'>
                         <p className='subtitle text-red'>Notre recette <Link className='text-primary' to='/recette'> <FontAwesomeIcon icon={faCookieBite} className='hover-scale-110 transition duration-300 text-red' /></Link></p>
                         <p className='title'>Découvrez la recette préférée de nos chefs</p>
                         <blockquote className='my-5 text-secondary text-lg leading-30  '>
