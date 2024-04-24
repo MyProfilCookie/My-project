@@ -45,7 +45,7 @@ const from = location.state?.from?.pathname || '/'
                 </div>
                 <div className="drawer-side">
                     <label htmlFor="my-drawer-4" aria-label="close sidebar" className="drawer-overlay"></label>
-                    <ul className="menu-drawer p-4 w-80 min-h-full bg-base-200 text-base-content">
+                    <ul className="menu-drawer p-4 w-80 min-h-full">
                         {/* Sidebar content here */}
                         <li><a href='/update-profile'>Profile</a></li>
                         <li><a>Mes recettes</a></li>

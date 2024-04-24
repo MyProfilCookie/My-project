@@ -3,7 +3,9 @@
   justify-content: space-between;
   padding: 0 1rem; 
   align-items: center;
-  background-color: #f3f4f6d0;
+  // background-color: #d7816a;
+  background-color: #4a2040;
+  color: #ffffff;
 
 
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1), 0 2px 4px 0 rgba(0, 0, 0, 0.06);
@@ -56,6 +58,13 @@ div[role="button"] {
   summary + * li:hover {
     color: #6366f1; /* hover:text-blue-500 */
   }
+  summary + *li a {
+    text-decoration: none;
+    color: #f3f4f6;
+  }
+a:not(footer) {
+  color: #f3f4f6;
+}
 
   summary + * li:focus {
     outline: 2px solid transparent;
@@ -88,6 +97,7 @@ div[role="button"] {
   text-decoration: none;
   transition: color 0.3s;
 }
+
 
 .btn:hover {
   color: #6366f1; /* hover:text-blue-500 */

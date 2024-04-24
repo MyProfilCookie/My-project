@@ -45,7 +45,7 @@ const Navbar = () => {
 
             <div className={`navbar bg-base-100 ${isSticky ? 'shadow-md bg-base-100 transition-all duration-300' : ''}`}>
                 <a href='/'>
-                    <img src={logo} alt="logo" style={{ width: '60px' }} className='logo-react'/>
+                    <img src={logo} alt="logo" style={{ width: '60px' }} className='logo-react text-white'/>
                 </a>
                 <div className="navbar-start">
                     <div className="dropdown">

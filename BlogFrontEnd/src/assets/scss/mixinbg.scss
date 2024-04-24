@@ -271,4 +271,11 @@
   .bg-noir {
     background-color: rgba(18, 18, 18, 1);
   }
-  
+  @mixin gradient-patisserie {
+    background: linear-gradient(to right, #fbc2eb, #a6c1ee); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  }
+  .bg-patisserie {
+    @include gradient-patisserie;
+    color: #333; // Couleur du texte pour une bonne lisibilité sur fond clair
+    min-height: 100vh; // Assure que le fond couvre toute la hauteur de la vue
+  }
