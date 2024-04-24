@@ -3,7 +3,7 @@
   background: linear-gradient($direction, $colors);
 }
 @mixin linear-gradient($colors, $direction: to right) {
-  background: linear-gradient-right($direction, $colors);
+  background: linear-gradient($direction, $colors);
 }
 
 // Définition des mixins pour chaque dégradé spécifique
@@ -271,3 +271,4 @@
   .bg-noir {
     background-color: rgba(18, 18, 18, 1);
   }
+  

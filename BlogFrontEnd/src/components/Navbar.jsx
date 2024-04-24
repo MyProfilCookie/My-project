@@ -41,9 +41,12 @@ const Navbar = () => {
 
 
     return (
-        <header className="fixed top-0 left-0 right-0 transition-all duration-300 ease-in-out z-10000 py-4">
+        <header className="max-w-screen-2xl fixed top-0 left-0 right-0 transition-all duration-300 ease-in-out z-10000 py-4">
 
             <div className={`navbar bg-base-100 ${isSticky ? 'shadow-md bg-base-100 transition-all duration-300' : ''}`}>
+                <a href='/'>
+                    <img src={logo} alt="logo" style={{ width: '60px' }} className='logo-react'/>
+                </a>
                 <div className="navbar-start">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -57,9 +60,6 @@ const Navbar = () => {
                         </ul>
                     </div>
                 </div>
-                    <a href='/'>
-                        <img src={logo} alt="logo" style={{ width: '60px' }} className='navbar-start' />
-                    </a>
 
                 <div className="navbar-center hidden lg:flex px-4">
                     <ul className="menu menu-horizontal px-1 ">

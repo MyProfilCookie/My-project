@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import React, { useContext} from 'react'
+import React, { useContext, useState } from 'react'
 import { useLocation, useNavigate } from 'react-router-dom'
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 // import { faUpload } from '@fortawesome/free-solid-svg-icons';
@@ -13,6 +13,10 @@ function UpdateProfile() {
     //  redirection vers la page d'accueil après connexion
     const from = location.state?.from?.pathname || '/'
     //  redirection vers la page d'accueil après connexion
+    const [isModalOpen, setIsModalOpen] = useState();
+    const openModal = () => {
+        setIsModalOpen(true);
+    };
 
 
     const {
@@ -26,7 +30,8 @@ function UpdateProfile() {
         const photoURL = data.photoURL
         updateUserProfile(name, photoURL).then(() => {
             alert('Mise à jour effectuée avec succès!')
-            navigate(from, { replace: true });
+            setIsModalOpen(false);
+            navigate(from, { replace: true }); // 
 
         }).catch((error) => {
             const errorMessage = error.message;

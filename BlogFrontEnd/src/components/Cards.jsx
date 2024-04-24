@@ -31,19 +31,19 @@ function Cards({ item }) {
                 <div className="card-body-cards">
                     <Link to={`/recettes/${item.id}`} className='mx-auto'><h3 className="card-title text-xl">{item.titre}</h3></Link>
                     {/* slice sur la description */}
-                    {/* <p> {item.description.slice(0, 200)}... </p> */}
-                    <p>{item.description}</p>
+                    <p> {item.description.slice(0, 200)}... </p>
+                    {/* <p>{item.description}</p> */}
 
-                    <div className="card-actions  h-full justify-between items-center mt-4">
+                    <div className="card-actions mx-auto h-full justify-between items-center">
                         <p className='font-semibold '>
                             {item.difficulte === 'facile' && <span className='badge badge-primary'>{item.difficulte}</span>}
                             {item.difficulte === 'moyenne' && <span className='badge badge-secondary'>{item.difficulte}</span>}
                             {item.difficulte === 'difficile' && <span className='badge badge-accent'>{item.difficulte}</span>}
                         </p>
 
-                       <Link to={`/recettes/${item.id}`}>
+                       {/* <Link to={`/recettes/${item.id}`}>
                             <button className="bton bton-primary">Voir plus</button>
-                        </Link>
+                        </Link> */}
                     </div>
                 </div>
             </div>

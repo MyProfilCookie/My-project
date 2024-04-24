@@ -1,3 +1,4 @@
+@import "./mixinbg.scss";
 // Classes pour les dégradés spécifiques
 .bg-creme-anglaise { @include gradient-creme-anglaise; }
 .bg-berry-delight { @include gradient-berry-delight; }

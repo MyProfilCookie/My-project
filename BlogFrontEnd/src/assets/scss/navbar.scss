@@ -1,8 +1,9 @@
 .navbar {
   display: flex;
   justify-content: space-between;
+  padding: 0 1rem; 
   align-items: center;
-  background: linear-gradient(135deg, #FADADD 0%, #EADAB8 100%);
+  background-color: #f3f4f6d0;
 
 
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1), 0 2px 4px 0 rgba(0, 0, 0, 0.06);
@@ -163,7 +164,10 @@ img[alt="logo"]:hover {
 }
 /* Burger menu for mobile */
 @media (max-width: 767px) {
-  .navbar-center {
+  .navbar {
+    padding: 1rem 0;
+  }
+  .navbar-center, .logo-react {
     display: none;
   }
   .navbar-end {

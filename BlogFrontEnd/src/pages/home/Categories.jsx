@@ -33,7 +33,7 @@ function Categories() {
     // Appel de la fonction fetchData
     fetchData();
     return (
-        <div className='section-container py-16'>
+        <div className='section-container py-16 mb-20'>
             <div className='text-center'>
                 <p className='text-red uppercase tracking-wide font-medium text-lg'>Choisissez une catégorie</p>
                 <h2 className='text-4xl md-text-5xl font-bold my-2 md-leading-snug leading-snug '>Nos recettes</h2>
