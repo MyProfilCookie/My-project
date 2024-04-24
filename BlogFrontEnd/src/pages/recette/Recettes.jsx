@@ -84,6 +84,13 @@ function Recettes() {
       ? recettes
       : recettes.filter(recette =>
         recette.title?.toLowerCase().includes(search.trim().toLowerCase())
+        || recette.category?.toLowerCase().includes(search.trim().toLowerCase())
+        || recette.difficulte?.toLowerCase().includes(search.trim().toLowerCase())
+        || recette.description?.toLowerCase().includes(search.trim().toLowerCase())
+        || recette.instruction?.toLowerCase().includes(search.trim().toLowerCase())
+        || recette.ingredient?.toLowerCase().includes(search.trim().toLowerCase())
+        || recette.type?.toLowerCase().includes(search.trim().toLowerCase())
+        
       );
     console.log("Filtered Results:", filtered); // Affiche les résultats filtrés pour débogage
     setFilteredRecettes(filtered);
