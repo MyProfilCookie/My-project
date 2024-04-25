@@ -1,6 +1,7 @@
 const User = require("../models/User");
 const createError = require("http-errors");
 const mongoose = require("mongoose");
+const Admin = require("../models/Admin");
 
 const getAllUsers = async (req, res, next) => {
   try {
@@ -101,18 +102,24 @@ const loginUser = async (req, res) => {
 };
 
 const updateUser = async (req, res, next) => {
-  const data = req.body;
   const { id } = req.params;
+  const { username, email, password, image } = req.body;
+
   try {
     if (!mongoose.Types.ObjectId.isValid(id)) {
       return next(createError(400, "ID n'existe pas"));
     }
+    const currentUser = await User.findById(id);
+
+    if (!currentUser) {
+      return next(createError(400, "Utilisateur n'existe pas"));
+    }
 
     const userUpdates = {
-      username: data.username,
-      email: data.email,
-      password: data.password,
-      role: data.role  // Assurez-vous d'ajouter ceci pour mettre à jour le rôle
+      username,
+      email,
+      password,
+      image,
     };
 
     const updatedUser = await User.findByIdAndUpdate(id, userUpdates, {
@@ -125,6 +132,7 @@ const updateUser = async (req, res, next) => {
         message: "Utilisateur mis à jour avec succès",
         result: updatedUser
       });
+      console.log(updatedUser);
     } else {
       res.status(200).json({
         status: false,

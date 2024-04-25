@@ -1,0 +1,59 @@
+.search-bar {
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 25px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px; /* Adjust based on your layout */
+  margin: 20px auto;
+}
+
+/* Styling for the input field to be modern and minimalistic */
+.form-control {
+  flex-grow: 1;
+  border: none;
+  outline: none;
+  padding: 8px 15px;
+  font-size: 16px; /* Adjust the font size as needed */
+  border-radius: 15px;
+  margin-right: 1rem;
+}
+
+/* Ensuring the input does not have a harsh outline when focused but rather a subtle shadow */
+.form-control:focus {
+  box-shadow: 0 2px 6px rgba(0, 123, 255, 0.25);
+}
+
+/* Button styling with a modern look, using gradient and shadow for depth */
+.btn-primary-recette {
+    padding: 10px 20px;
+    color: white;
+    border: none;
+    font-weight: bold;
+    border-radius: 15px;
+    cursor: pointer;
+    outline: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+/* Hover and active states for the button, with a slight scale for interactivity */
+.btn-primary-recette:hover,
+.btn-primary-recette:active {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(38, 120, 255, 0.3);
+}
+
+/* Styling for the search results count, making it elegant and noticeable */
+.search-results-count {
+  text-align: center;
+  font-size: 18px;
+  color: #4b5563; /* Dark gray for readability */
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.form-control:focus {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}

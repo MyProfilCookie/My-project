@@ -55,6 +55,7 @@ const recetteSchema = new Schema(
       required: true,
       minlenght: 6,
       maxlenght: 10,
+      enum: ["facile", "moyenne", "difficile"],
     },
     category: {
       type: String,

@@ -96,6 +96,12 @@ function Recettes() {
     setFilteredRecettes(filtered);
   };
 
+  const handleKeyDown = (event) => {
+    if (event.key === 'Enter') {
+      handleSearchClick();
+    }
+  };
+
 
 
   // const handleSearch = (e) => {
@@ -130,9 +136,10 @@ function Recettes() {
               placeholder="Rechercher une recette"
               value={search}
               onChange={handleSearchChange}
+              onKeyDown={handleKeyDown}
               className="form-control"
             />
-            <button onClick={handleSearchClick} className="btn btn-primary">Rechercher</button>
+            <button tabIndex={1} onClick={handleSearchClick} className="bton btn-primary-recette bg-espresso-dark">Rechercher</button>
           </div>
           <div>
             {filteredRecettes.length > 0 ? (
