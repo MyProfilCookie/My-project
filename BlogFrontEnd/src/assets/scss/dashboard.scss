@@ -1,0 +1,71 @@
+/* Style du drawer */
+.drawer {
+  position: relative;
+}
+.drawer-toggle {
+  display: none;
+}
+
+.drawer-content {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+.drawer-side {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 30%;
+  height: 100%;
+  background-color: rgba(127, 126, 126, 0.8);
+  color: #1f2937;
+  transform: translateX(0);
+  transition: transform 0.3s ease;
+}
+
+/* Décale le contenu de 30% vers la droite */
+.drawer-content {
+  transform: translateX(30%);
+}
+.drawer-overlay {
+  display: none;
+}
+.menu {
+  list-style: none;
+  padding: 30px;
+}
+.menu li a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: inherit;
+  transition: background-color 0.2s ease;
+}
+.menu li a:hover {
+  background-color: #e5e7eb;
+}
+
+/* Masqué car le drawer doit etre toujours ouvert */
+.drawer-button {
+  display: none;
+}
+/* Adapter en fonction de la largeur du drawer */
+#my-drawer-2:checked ~ .drawer-content {
+  transform: translateX(-250px);
+}
+#my-drawer-2:checked ~ .drawer-side {
+  transform: translateX(0);
+}
+#my-drawer-2:checked ~ .drawer-side .drawer-overlay {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.3s ease;
+}
+
+.lg-hidden {
+  @media (min-width: 1024px) {
+    display: none;
+  }
+}

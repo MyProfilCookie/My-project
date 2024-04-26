@@ -6,7 +6,13 @@ import Register from "../components/Register"
 import PrivateRouter from "../PrivateRouter/PrivateRouter"
 import UpdateProfile from "../pages/dashboard/UpdateProfile"
 import RecetteDetail from "../pages/recette/RecetteDetail"
-import AdminPanel from "../pages/dashboard/AdminPanel"
+import AdminPanel from "../pages/dashboard/admin/AdminPanel"
+import DashboardLayout from "../layout/DashboardLayout"
+import Dashboard from "../pages/dashboard/admin/Dashboard"
+import Users from "../pages/dashboard/admin/Users"
+// import Login from "../components/Login"
+// import UpdateRecette from "../pages/dashboard/admin/UpdateRecette"
+// import UpdateUser from "../pages/dashboard/admin/UpdateUser"
 
 
 const router = createBrowserRouter([
@@ -70,6 +76,20 @@ const router = createBrowserRouter([
         path: "/login",
         element: <div>Login</div>
     },
+    {
+        path: 'dashboard',
+        element: <PrivateRouter><DashboardLayout /></PrivateRouter>,
+        children: [
+            {
+                path: '',
+                element: <Dashboard />
+            },
+            {
+                path: 'users',
+                element: <Users />
+            },
+        ]
+    }
 ])
 
 export default router
