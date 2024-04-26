@@ -42,7 +42,7 @@ function DashboardLayout() {
             <div className="drawer-2 drawer-end h-full z-100">
                 <input id="my-drawer-2" type="checkbox" className="drawer-toggle-2" />
                 <label htmlFor="my-drawer-2" className="close-drawer-button"><IoMdCloseCircleOutline /></label>
-                <div className="drawer-content-2">
+                <div className="drawer-content-2 flex items-center justify-between mx-4">
                     <div className="flex items-center justify-between mx-4">
                         <label htmlFor="my-drawer-2" className="drawer-button btn btn-primary btn-ghost btn-circle avatar-profile lg-hidden ">
                             <MdDashboardCustomize className="w-32"/>

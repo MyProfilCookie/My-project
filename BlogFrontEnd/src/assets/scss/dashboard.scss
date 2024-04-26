@@ -1,40 +1,35 @@
-
-/* Style de base pour le drawer */
 .drawer-2 {
   position: relative;
 }
-.mr-2 {
-    margin-right: 0.5rem;
-  }
 
+/* Le bouton de contrôle est caché mais fonctionnel, utilisé pour mobile */
 .drawer-toggle-2 {
-  display: none; /* Le bouton de contrôle est caché mais fonctionnel */
+  display: none;
 }
 
-/* Le contenu du drawer n'est pas décalé par défaut */
+/* Le contenu du drawer */
 .drawer-content-2 {
   flex-grow: 1;
   display: flex;
   align-items: center;
-  justify-content: center;
+  // justify-content: center;
   transition: transform 0.3s ease;
 }
 
-/* Le côté du drawer est masqué par défaut et s'ouvre avec le toggle */
+/* Le côté du drawer est masqué par défaut pour les mobiles */
 .drawer-side-2 {
   display: none;
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%; /* Pleine largeur pour les mobiles */
   height: 100%;
   background-color: rgba(127, 126, 126, 0.8);
   color: #1f2937;
-  transform: translateX(-100%); /* Commence caché */
+  transform: translateX(-100%);
   transition: transform 0.3s ease;
 }
 
-/* Lorsque le checkbox est coché, affiche le drawer */
+/* Lorsque le checkbox est coché, affiche le drawer pour les mobiles */
 #my-drawer-2:checked ~ .drawer-side-2 {
   display: block;
   transform: translateX(0);
@@ -42,6 +37,17 @@
 
 .drawer-overlay-2 {
   display: none; /* L'overlay n'est pas nécessaire ici */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 998;
+}
+
+.close-drawer-button {
+  display: none; /* Masqué par défaut, affiché via JavaScript si nécessaire */
 }
 
 .menu-drawer-2 {
@@ -61,21 +67,8 @@
 .menu-drawer-2 li a:hover {
   background-color: #e5e7eb;
 }
-
-/* Style pour le bouton qui permet de basculer le drawer, visible uniquement sur mobile */
-.drawer-button-2 {
-  display: block; /* Affiché uniquement en mode mobile */
-  cursor: pointer;
-}
-.drawer-overlay-2 {
-  display: none; /* Initialement caché */
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  z-index: 998;
+.mr-2 {
+  margin-right: 0.5rem;
 }
 .close-drawer-button {
   position: absolute;
@@ -83,7 +76,7 @@
   right: 0;
   width: 50px;
   height: 50px;
-  color: white;
+  color: #1f2937;
   font-size: 20px;
   font-weight: bold;
   text-align: center;
@@ -95,15 +88,11 @@
   transition: all 0.3s ease;
 }
 
-#my-drawer-2:checked ~ .drawer-overlay-2 {
-  display: block; /* Afficher l'overlay quand le drawer est ouvert */
-}
-
 /* Gestion de la visibilité et du positionnement sur les écrans plus grands */
 @media (min-width: 768px) {
   .drawer-side-2 {
-    width: 30%; /* Prend 30% de la largeur de l'écran sur les appareils plus grands */
-    transform: translateX(0); /* Toujours visible */
+    display: block; /* Toujours affiché pour les desktops */
+    transform: translateX(0); /* Visible par défaut */
   }
 
   .drawer-content-2 {
@@ -111,7 +100,6 @@
       30%
     ); /* Décale le contenu pour faire de la place au drawer */
   }
-
   .lg-hidden {
     display: none;
   }
