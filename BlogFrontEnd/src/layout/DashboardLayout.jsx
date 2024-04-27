@@ -40,14 +40,14 @@ function DashboardLayout() {
     return (
         <div>
             <div className="drawer-2 drawer-end h-full z-100">
-                <input id="my-drawer-2" type="checkbox" className="drawer-toggle-2" />
-                <label htmlFor="my-drawer-2" className="close-drawer-button lg-hidden"><IoMdCloseCircleOutline /></label>
+                <input id="my-drawer-2" type="checkbox" className="drawer-toggle-2" /> 
+                <FontAwesomeIcon icon={faRightFromBracket} onClick={handleLogout} className=' close-drawer-button lg-hidden'/>
                 <div className="drawer-content-2 flex items-center justify-between mx-4 flex-wrap">
-                    <div className="flex items-center justify-between mx-4">
+                    <div className="flex items-center justify-between mt-4">
                         <label htmlFor="my-drawer-2" className="drawer-button btn btn-primary btn-ghost btn-circle avatar-profile lg-hidden ">
                             <MdDashboardCustomize className="w-32"/>
                         </label>
-                        <button className='btn rounded-full px-6 bg-sunset-cake lg-hidden' onClick={handleLogout}>Logout</button>
+                       
                     </div>
                     <Outlet />
                 </div>
