@@ -23,13 +23,14 @@ mongoose
   
 // importation des routes
 const recetteRoutes = require("./api/routes/recetteRoutes");
-app.use('/recettes', recetteRoutes);
-
 const userRoutes = require("./api/routes/userRoutes");
-app.use('/users', userRoutes);
-
 const adminRoutes = require("./api/routes/adminRoutes");
+
+// routes
+app.use('/recettes', recetteRoutes);
+app.use('/users', userRoutes);
 app.use('/admin', adminRoutes);
+
 
 
 app.get("/", (req, res) => {

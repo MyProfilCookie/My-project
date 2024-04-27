@@ -1,7 +1,6 @@
 const User = require("../models/User");
 const createError = require("http-errors");
 const mongoose = require("mongoose");
-const Admin = require("../models/Admin");
 
 const getAllUsers = async (req, res, next) => {
   try {
@@ -42,23 +41,20 @@ const getUserById = async (req, res, next) => {
     res.status(500).json({ message: err.message });
   }
 };
-const addUser = async (req, res, next) => {
+const createUser = async (req, res, next) => {
   const data = req.body;
   try {
-    const isUserExists = await User.findOne({ email: data.email });
-    if (isUserExists) {
+    const isUserEmailExists = await User.findOne({ email: data.email });
+    const isUserUsernameExists = await User.findOne({
+      username: data.username,
+    });
+    if (isUserUsernameExists) {
+      next(createError(500, "Username existe déjà "));
+      return;
+    } else if (isUserEmailExists) {
       next(createError(500, "Email existe déjà "));
     } else {
-      const isFirstUser = (await User.countDocuments()) === 0;
-      req.body.role = isFirstUser ? "admin" : "user";
-      const newUser = new User(data);
-      const result = await newUser.save();
-
-      // Exclude(remove) password field from the result
-      // const { password, ...resultWithoutPassword } = result.toObject();
-
-      // const tokenObj = { ID: result._id, email: result.email };
-      // const TOKEN = JWTGenerator(tokenObj, "1d");
+      const result = await User.create(data);
       res.status(200).json({
         status: true,
         message: "Utilisateur ajoute avec succes",
@@ -123,31 +119,82 @@ const updateUser = async (req, res, next) => {
     };
 
     const updatedUser = await User.findByIdAndUpdate(id, userUpdates, {
-      new: true
+      new: true,
     });
 
     if (updatedUser) {
       res.status(200).json({
         status: true,
         message: "Utilisateur mis à jour avec succès",
-        result: updatedUser
+        result: updatedUser,
       });
       console.log(updatedUser);
     } else {
       res.status(200).json({
         status: false,
         message: "Aucun changement n'a été effectué",
-        result: null
+        result: null,
       });
     }
   } catch (error) {
     next(createError(500, `Something went wrong: ${error.message}`));
   }
 };
+const getAdmin = async (req, res, next) => {
+  const email = req.params.email;
+  const query = { email: email };
+  
+  try {
+    const result = await User.findOne(query);
+    console.log(result);
+    if(email !== req.decoded.email) {
+      return res.status(401).json({
+        status: false,
+        message: "Unauthorized",
+      });
+    }
+    let admin = false;
+    if(result) {
+      admin = result?.role === "admin";
+    }
+    res.status(200).json({ admin });
+  } catch (error) {
+    next(createError(500, `Something went wrong: ${error.message}`));
+  }
+};
+const makeAdmin = async (req, res, next) => {
+  const userId = req.params.id;
+  const { name, email, photoUrl, role } = req.body;
+  try {
+    if (!mongoose.Types.ObjectId.isValid(id)) {
+      next(createError(400, "ID n'existe pas"));
+    }
+    const currentUser = await User.findByIdAndUpdate(userId);
+    if (!currentUser) {
+      next(createError(400, "Utilisateur n'existe pas"));
+    }
+    const userUpdates = await User.findByIdAndUpdate(userId, 
+     {role: "admin"},
+     {new: true, runValidator: false}
+    );
 
-
+    if(!userUpdates) {
+      next(createError(400, "Utilisateur n'existe pas"));
+    }
+    res.status(200).json({
+      status: true,
+      message: "Utilisateur mis à jour avec succès",
+      result: userUpdates,
+    });
+    console.log(userUpdates);
+  } catch (error) {
+    next(createError(500, `Something went wrong: ${error.message}`));
+  }
+};
+     
 const deleteUser = async (req, res, next) => {
-  const { id } = req.params;
+ const { id } = req.params;
+ console.log(id);
   try {
     if (!mongoose.Types.ObjectId.isValid(id)) {
       next(createError(400, "ID n'existe pas"));
@@ -159,17 +206,11 @@ const deleteUser = async (req, res, next) => {
         status: false,
         message: "L'utilisateur n'existe pas",
       });
-    } else if (req?.user?.email !== isUserExists?.email) {
-      next(createError(500, `Tu ne peux pas le supprimer`));
-    } else if (req?.user?.email === isUserExists?.email) {
-      next(createError(500, `Tu ne peux pas le supprimer`));
-    } else if (req?.user?.role !== "admin") {
-      next(createError(500, `Tu ne peux pas le supprimer`));
     } else {
       const result = await User.findByIdAndDelete(id);
       res.status(200).json({
         status: true,
-        message: "Utilisateur supprime avec succes",
+        message: "Utilisateur supprimé avec succes",
       });
       console.log(result);
     }
@@ -183,7 +224,7 @@ module.exports = {
   getUserById,
   updateUser,
   deleteUser,
-  getMe,
-  loginUser,
-  addUser,
+  createUser,
+  makeAdmin,
+  getAdmin,
 };
