@@ -1,4 +1,6 @@
 const Recette = require("../models/Recette");
+const Commentaire = require("../models/Commentaire");
+const Like = require("../models/Like");
 
 const getAllRecettes = async(req, res) => {
     try {
@@ -63,6 +65,23 @@ const updateRecette = async(req, res) => {
     }
 
 }
+const likeRecette = async(req, res) => {
+    const userId = req.body.userId;
+    const recetteId = req.body.recetteId;
+
+    try {
+        const like = new Like({
+            user: userId,
+            recette: recetteId
+        });
+        const newLike = await like.save();
+        res.status(201).json(newLike);
+        console.log(newLike);
+    } catch (err) {
+        res.status(400).json({ message: err.message }); 
+    }
+
+}
 
 const deleteRecette = async(req, res) => {
 
@@ -80,5 +99,6 @@ module.exports = {
     getRecetteById,
     createRecette,
     updateRecette,
-    deleteRecette
+    deleteRecette,
+    likeRecette
 }

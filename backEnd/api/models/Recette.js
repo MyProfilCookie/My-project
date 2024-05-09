@@ -68,6 +68,22 @@ const recetteSchema = new Schema(
       type: String,
       trim: true,
     },
+    user: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "User",
+    },
+    commentaires: [
+      {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Commentaire",
+      },
+    ],
+    likes: [
+      {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Like",
+      },
+    ],
   },
   {
     timestamps: true,

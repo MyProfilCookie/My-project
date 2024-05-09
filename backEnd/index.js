@@ -26,10 +26,12 @@ const recetteRoutes = require("./api/routes/recetteRoutes");
 const userRoutes = require("./api/routes/userRoutes");
 const adminRoutes = require("./api/routes/adminRoutes");
 
+
 // routes
 app.use('/recettes', recetteRoutes);
 app.use('/users', userRoutes);
 app.use('/admin', adminRoutes);
+
 
 
 
